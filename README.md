@@ -1,10 +1,20 @@
-# hpcc64.github.io
-This is just a start of something quite new for me. Let's see how far it will take me.
+# HPCC64 Lab
 
-## Running tests
+**Advanced IT Compliance, Tech Due Diligence, and Tech Consulting.**
 
-Run the unit tests using Python's builtin unittest module from the project root:
+HPCC64 Lab helps bridge the gap between regulatory requirements that corporate IT must address and the current state of corporate IT by offering ways to achieve these requirements.
 
-```sh
-python -m unittest
-```
+## Focus Areas
+
+- **Mission-Critical Systems**: We deal with mission-critical and business-critical information systems where failure is not an option.
+- **EU Regulations**: We use EU regulations as a basis for IT compliance assessments, ensuring the highest standards of security and governance.
+
+## Services
+
+- **IT Compliance**: Aligning systems with strict regulatory frameworks.
+- **Tech Due Diligence**: Assessing technology stacks and processes for M&A and audits.
+- **Tech Consulting**: Strategic advice for transforming IT infrastructure.
+
+## Website
+
+This repository hosts the static website for HPCC64 Lab.
