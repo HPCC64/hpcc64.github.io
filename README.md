@@ -17,4 +17,4 @@ HPCC64 Lab helps bridge the gap between regulatory requirements that corporate I
 
 ## Website
 
-This repository hosts the static website for HPCC64 Lab.
+This repository hosts the static website for the HPCC64 Lab.
