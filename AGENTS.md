@@ -1,5 +1,15 @@
 # Repository Guidelines
 
+## HPCC64 Lab identity and contribution provenance
+
+This public site represents **HPCC64 Lab as a human–AI research collaboration between Alex (human principal) and Aris (primary AI agent)**.
+
+Public copy should preserve that identity without implying that an AI system has human legal status or autonomous publication authority. Alex retains publication authority. Aris may research, draft and implement site content within the authorized scope.
+
+For material public content changes, record concept/direction, research/analysis, draft/implementation, review/validation and approval/publication in the PR when those roles differ. Do not use Git commit identity as a substitute for intellectual provenance.
+
+The research narrative should distinguish foundational work (for example Knowledge Fabric and PASGR-7 + EXEC) from applied research environments (for example Nomad Compass, Analog East and Premium Mobility). Do not expose private repository URLs or imply that private projects are publicly accessible.
+
 ## Project Structure & Module Organization
 This repository is currently minimal. `README.md` holds the public-facing project description, and `LICENSE` defines reuse terms. The repo is intended to host the HPCC64 Lab static website, but at the moment there are no site assets, templates, or build scripts committed. Keep the root clean and add new directories only when they establish a clear website structure such as `assets/`, `css/`, `js/`, or `pages/`.
 
