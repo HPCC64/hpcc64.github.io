@@ -68,8 +68,8 @@ Selected research repositories are currently private. Public artifacts and links
 
 ## Contribution provenance for this revision
 
-- **Concept / direction:** Alex
-- **Research framing:** Joint — Alex + Aris
+- **Concept origin:** Alex
+- **Research framing:** Alex — defined the research continuum and project set; Aris — structured the foundations-versus-applied narrative
 - **Initial draft / implementation:** Aris
 
 Review, baseline-approval, and publication-authorization events are recorded in the pull-request and release history so this public document does not embed transient workflow status.
