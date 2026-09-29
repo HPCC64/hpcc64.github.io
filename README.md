@@ -40,7 +40,8 @@ Material HPCC64 Lab work should make its intellectual lineage reconstructable. W
 2. **Research / analysis** — who gathered evidence and produced the reasoning or synthesis.
 3. **Draft / implementation** — who produced the text, code, data transformation or other artifact.
 4. **Review / validation** — who or what checked the work.
-5. **Approval / publication** — who accepted the result for use or publication.
+5. **Baseline approval** — who accepted a specific revision into the active baseline.
+6. **Publication authorization** — who authorized a specific revision for external publication.
 
 Preferred labels are **Alex**, **Aris**, **Joint**, a named supporting agent/model/tool, or a named external source/author.
 
@@ -68,6 +69,6 @@ Selected research repositories are currently private. Public artifacts and links
 
 - **Concept / direction:** Alex
 - **Research framing:** Joint — Alex + Aris
-- **Draft / implementation:** Aris
-- **Review / validation:** independent review pending
-- **Publication authority:** Alex
+- **Initial draft / implementation:** Aris
+
+Review, baseline-approval, and publication-authorization events are recorded in the pull-request and release history so this public document does not embed transient workflow status.
