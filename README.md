@@ -36,14 +36,15 @@ These projects are research environments as well as potential products or busine
 
 Material HPCC64 Lab work should make its intellectual lineage reconstructable. Where relevant, artifacts distinguish:
 
-1. **Concept / direction** — who originated or selected the idea or objective.
-2. **Research / analysis** — who gathered evidence and produced the reasoning or synthesis.
-3. **Draft / implementation** — who produced the text, code, data transformation or other artifact.
-4. **Review / validation** — who or what checked the work.
-5. **Baseline approval** — who accepted a specific revision into the active baseline.
-6. **Publication authorization** — who authorized a specific revision for external publication.
+1. **Concept origin** — who first originated the idea, objective, hypothesis or design.
+2. **Direction change / material reframing** — who later selected, narrowed, extended or materially reframed the concept.
+3. **Research / analysis** — who gathered evidence and produced the reasoning or synthesis.
+4. **Draft / implementation** — who produced the text, code, data transformation or other artifact.
+5. **Review / validation** — who or what checked a specific revision.
+6. **Baseline approval** — who accepted or rejected a specific revision for the active baseline.
+7. **Publication authorization** — who authorized or declined a specific revision for external publication.
 
-Preferred labels are **Alex**, **Aris**, **Joint**, a named supporting agent/model/tool, or a named external source/author.
+Record named actors separately: **Alex**, **Aris**, named supporting agents/models/tools, and named external sources/authors. Genuine co-development is represented by multiple actor-specific entries rather than a generic **Joint** label.
 
 Git commit identity alone is not treated as proof of intellectual origin. Contribution attribution is a provenance mechanism; legal ownership, rights and accountability remain separate questions governed by the applicable human/entity/legal framework.
 
