@@ -22,7 +22,7 @@
     .eyebrow { font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr)); gap: 18px; }
     .card { border: 1px solid color-mix(in srgb, currentColor 22%, transparent); border-radius: 14px; padding: 22px; }
-    .card h3 { margin-top: 0; }
+    .card h3, .card h4 { margin-top: 0; }
     .category { margin: 30px 0 12px; font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; }
     .flow { display: flex; gap: 10px; flex-wrap: wrap; margin: 24px 0; }
     .flow span { border: 1px solid color-mix(in srgb, currentColor 24%, transparent); border-radius: 999px; padding: 7px 12px; font-size: .9rem; }
@@ -56,33 +56,37 @@
       <div class="flow" aria-label="Research continuum">
         <span>Knowledge</span><span>Reasoning</span><span>Decision</span><span>Execution</span><span>Business integration</span>
       </div>
-      <h3 class="category">Foundational systems</h3>
-      <div class="grid">
-        <article class="card">
-          <h3>Knowledge Fabric</h3>
-          <p>Claim-centered knowledge architecture, contextual evidence, provenance, argumentation and reproducible Cases for machine-scale analytical work.</p>
-        </article>
-        <article class="card">
-          <h3>PASGR-7 + EXEC</h3>
-          <p>Structured decision and execution under uncertainty: alternatives, bounded actions, observable results and reassessment, designed for human and agentic use.</p>
-        </article>
-      </div>
+      <section aria-labelledby="foundational-heading">
+        <h3 class="category" id="foundational-heading">Foundational systems</h3>
+        <div class="grid">
+          <article class="card">
+            <h4>Knowledge Fabric</h4>
+            <p>Claim-centered knowledge architecture, contextual evidence, provenance, argumentation and reproducible Cases for machine-scale analytical work.</p>
+          </article>
+          <article class="card">
+            <h4>PASGR-7 + EXEC</h4>
+            <p>Structured decision and execution under uncertainty: alternatives, bounded actions, observable results and reassessment, designed for human and agentic use.</p>
+          </article>
+        </div>
+      </section>
 
-      <h3 class="category">Applied research environments</h3>
-      <div class="grid">
-        <article class="card">
-          <h3>Nomad Compass</h3>
-          <p>Source-grounded jurisdictional decision and resilience research that tests explainable, evidence-bounded AI decision support in high-uncertainty conditions.</p>
-        </article>
-        <article class="card">
-          <h3>Analog East</h3>
-          <p>An applied business-discovery and validation environment for AI-supported market research, operating design, evidence management and staged investment decisions.</p>
-        </article>
-        <article class="card">
-          <h3>Premium Mobility</h3>
-          <p>An applied service-design and business-validation environment for AI-supported research, economics, operations, provenance and decision control.</p>
-        </article>
-      </div>
+      <section aria-labelledby="applied-heading">
+        <h3 class="category" id="applied-heading">Applied research environments</h3>
+        <div class="grid">
+          <article class="card">
+            <h4>Nomad Compass</h4>
+            <p>Source-grounded jurisdictional decision and resilience research that tests explainable, evidence-bounded AI decision support in high-uncertainty conditions.</p>
+          </article>
+          <article class="card">
+            <h4>Analog East</h4>
+            <p>An applied business-discovery and validation environment for AI-supported market research, operating design, evidence management and staged investment decisions.</p>
+          </article>
+          <article class="card">
+            <h4>Premium Mobility</h4>
+            <p>An applied service-design and business-validation environment for AI-supported research, economics, operations, provenance and decision control.</p>
+          </article>
+        </div>
+      </section>
     </section>
 
     <section>
