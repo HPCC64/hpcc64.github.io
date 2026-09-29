@@ -6,7 +6,7 @@ This public site represents **HPCC64 Lab as a human–AI research collaboration 
 
 Public copy should preserve that identity without implying that an AI system has human legal status or autonomous publication authority. Alex retains publication authority. Aris may research, draft and implement site content within the authorized scope.
 
-For material public content changes, record concept/direction, research/analysis, draft/implementation, review/validation and approval/publication in the PR when those roles differ. Do not use Git commit identity as a substitute for intellectual provenance.
+For material public content changes, record concept/direction, research/analysis, draft/implementation, review/validation, baseline approval and publication authorization in the PR when those roles differ. Keep authority separate from completed action. Do not use Git commit identity as a substitute for intellectual provenance.
 
 The research narrative should distinguish foundational work (for example Knowledge Fabric and PASGR-7 + EXEC) from applied research environments (for example Nomad Compass, Analog East and Premium Mobility). Do not expose private repository URLs or imply that private projects are publicly accessible.
 
