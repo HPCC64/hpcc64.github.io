@@ -20,9 +20,10 @@
     p { max-width: 760px; }
     .lede { font-size: 1.25rem; max-width: 820px; }
     .eyebrow { font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr)); gap: 18px; }
     .card { border: 1px solid color-mix(in srgb, currentColor 22%, transparent); border-radius: 14px; padding: 22px; }
     .card h3 { margin-top: 0; }
+    .category { margin: 30px 0 12px; font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; }
     .flow { display: flex; gap: 10px; flex-wrap: wrap; margin: 24px 0; }
     .flow span { border: 1px solid color-mix(in srgb, currentColor 24%, transparent); border-radius: 999px; padding: 7px 12px; font-size: .9rem; }
     footer { margin-top: 64px; padding-top: 22px; border-top: 1px solid color-mix(in srgb, currentColor 20%, transparent); font-size: .9rem; opacity: .8; }
@@ -55,6 +56,7 @@
       <div class="flow" aria-label="Research continuum">
         <span>Knowledge</span><span>Reasoning</span><span>Decision</span><span>Execution</span><span>Business integration</span>
       </div>
+      <h3 class="category">Foundational systems</h3>
       <div class="grid">
         <article class="card">
           <h3>Knowledge Fabric</h3>
@@ -64,6 +66,10 @@
           <h3>PASGR-7 + EXEC</h3>
           <p>Structured decision and execution under uncertainty: alternatives, bounded actions, observable results and reassessment, designed for human and agentic use.</p>
         </article>
+      </div>
+
+      <h3 class="category">Applied research environments</h3>
+      <div class="grid">
         <article class="card">
           <h3>Nomad Compass</h3>
           <p>Source-grounded jurisdictional decision and resilience research that tests explainable, evidence-bounded AI decision support in high-uncertainty conditions.</p>
@@ -81,7 +87,7 @@
 
     <section>
       <h2>Traceable contribution, not opaque assistance</h2>
-      <p>Material work distinguishes concept and direction, research and analysis, drafting or implementation, review and validation, and final approval or publication. This makes human and machine contributions reconstructable rather than hiding them behind a generic “AI-assisted” label.</p>
+      <p>Material work distinguishes concept and direction, research and analysis, drafting or implementation, review and validation, baseline approval, and publication authorization. This makes human and machine contributions reconstructable rather than hiding them behind a generic “AI-assisted” label.</p>
       <p>Git commit identity is not treated as proof of intellectual origin. Contribution provenance is recorded separately from legal ownership, rights and accountability.</p>
     </section>
 
