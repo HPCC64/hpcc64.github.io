@@ -10,7 +10,7 @@ The Lab studies how complex socio-technical systems move from evidence to knowle
 
 The website is intentionally a **one-page narrative landing page**, not a CV, consulting-services catalogue, or project directory.
 
-The canonical narrative follows the evolution of the work:
+The narrative connects the following research questions. It preserves the intended causal arc without presenting unverified month-level milestones as established history:
 
 1. **Critical systems and resilience** — failure modes, business continuity, recoverability, and mission-critical infrastructure.
 2. **Architecture and system state** — moving from components toward whole-system reasoning.
@@ -24,11 +24,11 @@ The canonical narrative follows the evolution of the work:
 
 **Risk-Guided Value Engineering (RGVE)** is the developing general methodology for engineering robust transitions from evidenced current state toward a required or chosen target state while creating better value across **Money, Time, Quality, and Risk / Uncertainty**.
 
-Historically, **RGTA — Risk-Guided Technology Advisory** is the technology-domain application from which the broader RGVE concept emerged.
+**RGTA — Risk-Guided Technology Advisory** is the technology-domain framing used to introduce the broader RGVE concept. The exact development chronology is not established by the available public source record.
 
 **MTQR** is RGVE's canonical evaluation coordinate system. It is an evaluation kernel, not the whole methodology.
 
-RGVE is still being formalized and should not be presented as a frozen or fully validated specification.
+RGVE is still a developing methodological direction. Its dedicated source currently contains only a bootstrap placeholder; this page is a scoped public concept description, not evidence of a complete or validated specification.
 
 ## Current research system
 
@@ -44,7 +44,11 @@ RGVE is still being formalized and should not be presented as a frozen or fully 
 - **Analog East** — AI-assisted business discovery, market validation, and staged investment reasoning.
 - **Premium Mobility** — AI-assisted service design, economics, operational analysis, provenance, and decision control.
 
-These applied projects provide concrete environments in which the foundational ideas can be tested against real operational constraints.
+These applied projects provide concrete environments in which the foundational ideas can be tested against real operational constraints. This is a research framing, not a claim that a validation program has already produced results.
+
+### Social and institutional research
+
+Social Systems and Power owns general theory; Social Hacking develops diagnostic/navigation methods; Decorative Reality studies representation and mechanism. Their candidate propositions and evidence remain distinct from established results.
 
 ## HPCC64
 
@@ -86,9 +90,9 @@ These applied projects provide concrete environments in which the foundational i
 
 ## What we have produced
 
-- **Hybrid Multicloud Infrastructure for Mission-Critical IT** — an evolving body of work on resilient infrastructure, business continuity, data governance, confidential computing, and hybrid multi-cloud architecture.
-- **Knowledge Fabric** — evidence-based, machine-usable knowledge with explicit provenance and reasoning structure.
-- **Risk-Guided Value Engineering** — a developing general value-engineering methodology evolved from compliance assessment, technology due diligence, and RGTA.
+- **Hybrid Multicloud Infrastructure for Mission-Critical IT** — a working book manuscript and planning framework on resilient infrastructure, business continuity, data governance, confidential computing, and hybrid multi-cloud architecture.
+- **Knowledge Fabric** — architecture/research contracts for evidence-based, machine-usable knowledge with explicit provenance and reasoning structure; implementation and validation remain ongoing.
+- **Risk-Guided Value Engineering** — a developing concept connecting compliance assessment, technology due diligence and RGTA, without a complete validated specification.
 - **HPCC64 Framework** — Human · Purpose · Cognition · Control plus six system domains × four decision criteria.
 
 ## Traceable collaboration
@@ -103,11 +107,13 @@ This repository is the public static website source for HPCC64 Lab.
 
 The site is deliberately GitHub-native: static HTML/CSS, minimal dependencies, and no application framework. Selected research repositories remain private until they reach an explicit publication state.
 
-## Contribution provenance for this revision
+## Contribution provenance and public claims
 
-- **Concept origin:** Alex
-- **Historical narrative:** recovered from the previously agreed HPCC64 one-page structure
-- **Research framing:** Alex — development path and research direction; Aris — reconstruction and structuring of the narrative
-- **Draft / implementation:** Aris
+- **Concept origin / direction:** the prior PR draft attributes the lab framing and research direction to Alex. The original message-level source for the full historical narrative and its exact chronology is not retained here, so blanket original authorship or prior approval of every formulation is not asserted.
+- **Current reconstruction / material reframing / implementation:** Aris, within the Stage1 item13 task; removal of unsupported dates, explicit candidate maturity, restoration of foundational names, ownership alignment and accessibility corrections.
+- **Research sources:** current project and brand records were checked for the limited descriptions above. Private repository URLs and private artifacts are not reproduced in this public source.
+- **Review, baseline acceptance and publication:** separate events recorded against exact immutable content in PR/merge history. Actor/source identity, role, scope and outcome remain distinct; an instruction authorizing integration does not prove Alex personally reviewed a later SHA.
 
-Review, baseline-approval, and publication-authorization events are recorded in pull-request and release history rather than embedded as transient status in public copy.
+The earlier narrative remains in [PR6 source history](https://github.com/HPCC64/hpcc64.github.io/commit/a7ef5fe4e4c7818adb267f84adb93f49d1bb3817). Its chronology is retained as historical draft material, not independently verified fact. Current task authority and its limits are retained in the [captured item13 mandate](https://github.com/HPCC64/hpcc64.github.io/blob/4b2e7d29729b10d496958275dbfabee2f1f17ba0/.github/stage-1-item-13-mandate.md); completed acceptance events must be outside the content they attest.
+
+The CSS text wordmark and red value are website presentation choices, not a recovered/frozen canonical vector, font or production colour specification. Brand-source recovery and geometry studies remain separate tasks. The site adds no new identity asset.

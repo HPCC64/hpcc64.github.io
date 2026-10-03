@@ -18,6 +18,10 @@
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    :focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+    .skip-link { position: absolute; top: -100px; left: 12px; padding: 12px; background: var(--paper); z-index: 1; }
+    .skip-link:focus { top: 12px; }
     body { margin: 0; background: var(--paper); color: var(--ink); }
     a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
     .shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
@@ -90,7 +94,7 @@
     .domains { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .outputs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .criteria article, .domains article, .outputs article { background: var(--paper); padding: 22px; }
-    .criteria h3, .domains h3, .outputs h3 { margin: 0 0 8px; font-size: 1rem; }
+    .criteria h3, .domains h4, .outputs h3 { margin: 0 0 8px; font-size: 1rem; }
     .sequence {
       display: flex; flex-wrap: wrap; align-items: center;
       gap: 9px; margin: 34px 0; font-weight: 800;
@@ -137,6 +141,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#top">Skip to content</a>
   <div class="shell">
     <header class="topbar">
       <a class="wordmark" href="#top" aria-label="HPCC64 Lab home">HPCC<span class="accent">64</span></a>
@@ -149,7 +154,7 @@
       </nav>
     </header>
 
-    <main id="top">
+    <main id="top" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title">
         <div class="kicker">HPCC64 Lab</div>
         <h1 id="hero-title">A human and an AI, working as one lab.</h1>
@@ -176,18 +181,18 @@
           <div class="label">The path</div>
           <div>
             <h2 id="path-title">From resilience to cognition.</h2>
-            <p>This work did not start as an “AI lab.” It emerged from a sequence of practical problems: keeping critical systems alive, understanding what a system must become, engineering value under constraints, turning evidence into decisions, and finally asking how a human and an AI should work together as one cognitive system.</p>
+            <p>The research connects a sequence of practical questions: how to keep critical systems alive, understand what a system must become, engineer value under constraints, turn evidence into decisions, and organize human–AI work. This is a conceptual path through the work, not a dated history of completed milestones.</p>
           </div>
         </header>
 
         <ol class="timeline">
-          <li><div class="date">March 2025</div><div><h3>Resilience first</h3><p>The starting point was mission-critical IT: failure modes, business continuity, recoverability, and the idea that architecture should be judged by what happens when normal assumptions fail.</p></div></li>
-          <li><div class="date">November 2025</div><div><h3>From components to whole systems</h3><p>The scope widened from individual infrastructure choices to architecture, lifecycle, dependencies, and mission-critical information systems as complete socio-technical systems.</p></div></li>
-          <li><div class="date">April 2026</div><div><h3>Required State → Current State → Target State</h3><p>Compliance, technology due diligence, and transformation converged into the same structural problem: establish what is required, evidence what actually exists, then design the most defensible transition between the two.</p></div></li>
-          <li><div class="date">August 2026</div><div><h3>From RGTA to RGVE</h3><p>Risk-Guided Technology Advisory became the technology-domain expression of a broader idea: Risk-Guided Value Engineering. The question shifted from “Which technology?” to “Which feasible change creates the best value under explicit uncertainty and constraints?”</p></div></li>
-          <li><div class="date">August 2026</div><div><h3>Knowledge becomes infrastructure</h3><p>The early Evidence → Information → Knowledge → Insight → Decision → Action ladder evolved into Knowledge Fabric: a claim-centered architecture for evidence, provenance, competing interpretations, reusable Cases, and machine-scale analytical breadth.</p></div></li>
-          <li><div class="date">Late August 2026</div><div><h3>AI stops being just a tool</h3><p>The operating model changed from episodic AI assistance to human–machine cognitive symbiosis: a persistent principal/counterpart pair, with additional agents and tools used as bounded capabilities rather than as an autonomous organization.</p></div></li>
-          <li><div class="date">September 2026</div><div><h3>Identity, bounded agency, and HPCC64</h3><p>The research, operating model, and brand converged around four questions: Human, Purpose, Cognition, and Control. The 64 Framework added six system domains and four decision criteria as a compact analytical space.</p></div></li>
+          <li><div class="date">Resilience</div><div><h3>Resilience first</h3><p>Mission-critical IT provides the starting question: failure modes, business continuity, recoverability, and the idea that architecture should be judged by what happens when normal assumptions fail.</p></div></li>
+          <li><div class="date">Architecture</div><div><h3>From components to whole systems</h3><p>Move from individual infrastructure choices to architecture, lifecycle, dependencies, and mission-critical information systems as complete socio-technical systems.</p></div></li>
+          <li><div class="date">System state</div><div><h3>Required State → Current State → Target State</h3><p>Compliance, technology due diligence, and transformation share a structural problem: establish what is required, evidence what actually exists, then design the most defensible transition between the two.</p></div></li>
+          <li><div class="date">Value engineering</div><div><h3>From RGTA to RGVE</h3><p>Risk-Guided Technology Advisory is the technology-domain framing behind the developing Risk-Guided Value Engineering concept. It broadens the question from “Which technology?” to “Which feasible change creates the best value under explicit uncertainty and constraints?”</p></div></li>
+          <li><div class="date">Knowledge</div><div><h3>Knowledge becomes infrastructure</h3><p>The Evidence → Information → Knowledge → Insight → Decision → Action sequence motivates Knowledge Fabric: a claim-centered architecture for evidence, provenance, competing interpretations, reusable Cases, and machine-scale analytical breadth.</p></div></li>
+          <li><div class="date">Collaboration</div><div><h3>AI stops being just a tool</h3><p>The operating model aims for continuity beyond episodic AI assistance: a persistent principal/counterpart pair, with additional agents and tools used as bounded capabilities rather than as an autonomous organization.</p></div></li>
+          <li><div class="date">Identity</div><div><h3>Identity, bounded agency, and HPCC64</h3><p>The research, operating model, and brand meet in four questions: Human, Purpose, Cognition, and Control. The 64 Framework organizes six system domains and four decision criteria into a compact analytical space.</p></div></li>
         </ol>
       </section>
 
@@ -240,7 +245,7 @@
           <span>Evidence</span><b>→</b><span>Information</span><b>→</b><span>Knowledge</span><b>→</b><span>Insight</span><b>→</b><span>Decision</span><b>→</b><span>Action</span>
         </div>
 
-        <p>Knowledge Fabric grew from that sequence into a claim-centered architecture: atomic Claims, explicit provenance, multiple frames, competing arguments, reproducible Cases, and a portable boundary between authored knowledge and execution runtimes.</p>
+        <p>Knowledge Fabric develops that sequence as a claim-centered architecture: atomic Claims, explicit provenance, multiple frames, competing arguments, reproducible Cases, and a portable boundary between authored knowledge and execution runtimes.</p>
       </section>
 
       <section class="major" aria-labelledby="symbiosis-title">
@@ -248,7 +253,7 @@
           <div class="label">Human–machine symbiosis</div>
           <div>
             <h2 id="symbiosis-title">One principal. One cognitive counterpart.</h2>
-            <p>The Lab itself became part of the research. Alex remains the human principal. Aris is the persistent AI cognitive counterpart. Additional agents, models, and tools are invoked dynamically for bounded tasks. Authority and accountability remain human; cognition can be distributed.</p>
+            <p>The Lab itself is part of the research. Alex remains the human principal. Aris is the persistent AI cognitive counterpart. Additional agents, models, and tools are invoked dynamically for bounded tasks. Continuity depends on preserved project records, not uninterrupted model memory. Authority and accountability remain human; cognition can be distributed.</p>
           </div>
         </header>
 
@@ -282,12 +287,12 @@
 
         <h3>Six system domains</h3>
         <div class="domains">
-          <article><h3>1. Value & Outcomes</h3><p>Intended value, beneficiaries, outcomes, measurable effects.</p></article>
-          <article><h3>2. Actors & Capabilities</h3><p>Humans, organizations, agents, responsibilities, incentives, capabilities.</p></article>
-          <article><h3>3. Processes & Operating Model</h3><p>Workflows, coordination, decision rights, handoffs, operating structures.</p></article>
-          <article><h3>4. Evidence, Data & Knowledge</h3><p>Provenance, evidence quality, knowledge formation, information lifecycle.</p></article>
-          <article><h3>5. Cognition, Decisions & Automation</h3><p>Reasoning, models, decision mechanisms, automation, human–machine interaction.</p></article>
-          <article><h3>6. Technology, Infrastructure & Dependencies</h3><p>Platforms, interfaces, suppliers, dependencies, resilience mechanisms.</p></article>
+          <article><h4>1. Value & Outcomes</h4><p>Intended value, beneficiaries, outcomes, measurable effects.</p></article>
+          <article><h4>2. Actors & Capabilities</h4><p>Humans, organizations, agents, responsibilities, incentives, capabilities.</p></article>
+          <article><h4>3. Processes & Operating Model</h4><p>Workflows, coordination, decision rights, handoffs, operating structures.</p></article>
+          <article><h4>4. Evidence, Data & Knowledge</h4><p>Provenance, evidence quality, knowledge formation, information lifecycle.</p></article>
+          <article><h4>5. Cognition, Decisions & Automation</h4><p>Reasoning, models, decision mechanisms, automation, human–machine interaction.</p></article>
+          <article><h4>6. Technology, Infrastructure & Dependencies</h4><p>Platforms, interfaces, suppliers, dependencies, resilience mechanisms.</p></article>
         </div>
       </section>
 
@@ -296,9 +301,22 @@
           <div class="label">Current work</div>
           <div>
             <h2 id="work-title">What we work on now.</h2>
-            <p>Mission-critical systems, Risk-Guided Value Engineering, knowledge architecture, AI and agent systems, human–machine symbiosis, bounded digital agency, and purpose-specific digital identities — tested through both foundational work and applied environments.</p>
+            <p>Mission-critical systems, Risk-Guided Value Engineering, knowledge architecture, AI and agent systems, human–machine symbiosis, bounded digital agency, and purpose-specific digital identities — to be evaluated through foundational work and applied environments.</p>
           </div>
         </header>
+        <section aria-labelledby="foundations-title">
+          <h3 id="foundations-title">Foundational systems</h3>
+          <h4>Knowledge Fabric</h4>
+          <p>A developing architecture for claims, evidence, provenance and durable decision state, with separately scoped runtime capture and replay work.</p>
+          <h4>PASGR-7 + EXEC</h4>
+          <p>Structured decision selection connected to bounded execution, observable results and reassessment. Working mechanisms remain distinct from validated operational capabilities.</p>
+          <h4>Risk-Guided Value Engineering</h4>
+          <p>A developing methodological direction for comparing feasible change across Money, Time, Quality and Risk / Uncertainty.</p>
+        </section>
+        <section aria-labelledby="research-lenses-title">
+          <h3 id="research-lenses-title">Social and institutional research</h3>
+          <p>Social Systems and Power studies general theory; Social Hacking develops diagnostic and navigation methods; Decorative Reality examines representation and mechanism. Their hypotheses and evidence remain distinct from established results.</p>
+        </section>
       </section>
 
       <section class="major" aria-labelledby="outputs-title">
@@ -311,16 +329,16 @@
         </header>
 
         <div class="outputs">
-          <article><h3>Hybrid Multicloud Infrastructure for Mission-Critical IT</h3><p>An evolving body of work on resilient infrastructure, business continuity, data governance, confidential computing, and hybrid multi-cloud architecture.</p></article>
-          <article><h3>Knowledge Fabric</h3><p>Evidence-based, machine-usable knowledge with explicit provenance, claim structure, reasoning, and reproducible analytical state.</p></article>
-          <article><h3>Risk-Guided Value Engineering</h3><p>A developing general value-engineering methodology evolved from compliance assessment, technology due diligence, and RGTA.</p></article>
+          <article><h3>Hybrid Multicloud Infrastructure for Mission-Critical IT</h3><p>A working book manuscript and planning framework on resilient infrastructure, business continuity, data governance, confidential computing, and hybrid multi-cloud architecture.</p></article>
+          <article><h3>Knowledge Fabric</h3><p>Architecture and research contracts for evidence-based, machine-usable knowledge, explicit provenance, claim structure and reproducible analytical state; implementation and validation remain ongoing.</p></article>
+          <article><h3>Risk-Guided Value Engineering</h3><p>A developing value-engineering concept connecting compliance assessment, technology due diligence and RGTA; a complete validated specification is not yet available.</p></article>
           <article><h3>HPCC64 Framework</h3><p>Human · Purpose · Cognition · Control together with six system domains × four decision criteria.</p></article>
         </div>
       </section>
 
       <section class="major" aria-labelledby="applied-title">
         <header>
-          <div class="label">Applied environments</div>
+          <div class="label">Applied research environments</div>
           <div>
             <h2 id="applied-title">Where the ideas meet reality.</h2>
             <p>Nomad Compass, Analog East, and Premium Mobility are applied research environments where evidence, decisions, economics, operating constraints, and AI-assisted workflows can be tested against concrete problems.</p>
