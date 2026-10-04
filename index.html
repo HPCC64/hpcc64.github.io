@@ -64,6 +64,10 @@
     .landscape li:first-child { border-top: 0; padding-top: 0; }
     .landscape strong { display: block; color: var(--ink); }
     .output-note { max-width: var(--measure); margin: 48px 0 0; color: var(--muted); font-size: .9rem; }
+    .outputs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 44px; border-top: 1px solid var(--ink); }
+    .outputs article { padding: 24px 0 26px; border-bottom: 1px solid var(--line); }
+    .outputs h3 { margin: 0 0 8px; font-size: 1rem; }
+    .outputs p { margin: 0; color: #444; font-size: .94rem; }
 
     .identity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; padding-top: 28px; border-top: 1px solid var(--ink); }
     .identity-grid h3 { margin: 0 0 12px; font-size: 1rem; }
@@ -94,7 +98,7 @@
       section { padding: 70px 0; }
       .section-head, .timeline li, .layer, .identity-mark { grid-template-columns: 1fr; }
       .section-head, .timeline li, .layer { gap: 12px; }
-      .landscape, .identity-grid, .lab-pair, .matrix { grid-template-columns: 1fr; }
+      .landscape, .identity-grid, .lab-pair, .matrix, .outputs { grid-template-columns: 1fr; }
       .landscape, .identity-grid, .lab-pair { gap: 34px; }
       .identity-mark { gap: 28px; }
     }
@@ -113,6 +117,7 @@
         <a href="#evolution">Evolution</a>
         <a href="#system">System</a>
         <a href="#landscape">Work</a>
+        <a href="#outputs">Outputs</a>
         <a href="#identity">HPCC64</a>
         <a href="#lab">Lab</a>
       </nav>
@@ -135,44 +140,44 @@
           </div>
         </div>
 
-        <ol class="timeline">
+        <ol class="timeline" role="list">
           <li>
-            <div class="period">2003 → 2024</div>
+            <div class="period">Research roots</div>
             <div>
               <h3>Fault tolerance, mission-critical IT, and resilience</h3>
               <p>The research roots are in fault tolerance for distributed systems, followed by two decades of work around enterprise and mission-critical infrastructure. Business continuity, availability, recoverability, data lifecycle, and hybrid architecture established the first principle: systems should be judged by behaviour under failure, not by the elegance of individual components.</p>
             </div>
           </li>
           <li>
-            <div class="period">2025 → H1 2026</div>
+            <div class="period">2025–2026</div>
             <div>
               <h3>From infrastructure to system state</h3>
               <p>Technology due diligence, compliance, and transformation work made the next problem explicit: separate what a system <em>must</em> be, what evidence shows it <em>is</em>, and what feasible target state can close the gap. This became the Required State → Current State → Target State pattern.</p>
             </div>
           </li>
           <li>
-            <div class="period">H1 → Aug 2026</div>
+            <div class="period">2026 · advisory</div>
             <div>
               <h3>Risk-guided decision engineering</h3>
               <p>Risk-Guided Technology Advisory (RGTA) connected state assessment to the choice between alternatives. Money, Time, Quality, and Risk / Uncertainty (MTQR) became the common coordinates for comparing value and trade-offs instead of optimizing one variable in isolation.</p>
             </div>
           </li>
           <li>
-            <div class="period">May → Sep 2026</div>
+            <div class="period">2026 · knowledge</div>
             <div>
               <h3>Knowledge becomes infrastructure</h3>
               <p>Early Knowledge-as-Code experiments evolved into Knowledge Fabric: evidence, atomic claims, provenance, competing interpretations, reusable cases, and reproducible analytical state. The focus moved from storing documents to preserving the structure needed to reconstruct reasoning.</p>
             </div>
           </li>
           <li>
-            <div class="period">Aug → Sep 2026</div>
+            <div class="period">2026 · collaboration</div>
             <div>
               <h3>AI becomes part of the operating model</h3>
               <p>The Lab moved beyond episodic AI assistance toward a persistent human principal / AI cognitive counterpart model. Additional models and agents became temporary bounded capabilities rather than a simulated permanent staff; identity, authorization, failure handling, and provenance became first-class design concerns.</p>
             </div>
           </li>
           <li>
-            <div class="period">Sep → Oct 2026</div>
+            <div class="period">Current convergence</div>
             <div>
               <h3>Convergence into HPCC64</h3>
               <p>RGTA broadened into Risk-Guided Value Engineering (RGVE), PASGR-7 connected decision structure to execution, and the different research branches converged around one system view: Human · Purpose · Cognition · Control. HPCC64 became the compact frame for the whole system rather than another isolated methodology.</p>
@@ -199,7 +204,7 @@
           <article class="layer">
             <div class="layer-number">02</div>
             <h3>Value & choice</h3>
-            <p><strong>RGVE</strong> generalizes the earlier technology-domain RGTA approach. <strong>MTQR</strong> provides Money · Time · Quality · Risk / Uncertainty as common decision coordinates.</p>
+            <p><strong>RGVE</strong> is the developing generalization of the earlier technology-domain RGTA approach; it remains under formalization and should not be read as a frozen or fully validated specification. <strong>MTQR</strong> provides Money · Time · Quality · Risk / Uncertainty as common decision coordinates.</p>
           </article>
           <article class="layer">
             <div class="layer-number">03</div>
@@ -232,7 +237,7 @@
           <div>
             <h3>Methods & decision systems</h3>
             <ul>
-              <li><strong>RGVE / RGTA / MTQR</strong>Assessment, value engineering, and explicit trade-off analysis.</li>
+              <li><strong>RGVE / RGTA / MTQR</strong>Developing value-engineering methodology, its technology-domain predecessor, and explicit trade-off coordinates.</li>
               <li><strong>PASGR-7 + EXEC</strong>Decision selection, bounded execution, observation, and reassessment.</li>
               <li><strong>Compliance + Due Diligence</strong>Required/current state evidence and gap identification.</li>
             </ul>
@@ -257,7 +262,36 @@
           </div>
         </div>
 
-        <p class="output-note">Long-form work includes <strong>Hybrid Multicloud Infrastructure for Mission-Critical IT</strong>, which connects the original resilience and infrastructure research with business continuity, data governance, confidential computing, and hybrid multi-cloud architecture. Supporting repositories also formalize repository standards, automation, provenance, and reproducibility.</p>
+        <p class="output-note">The landscape above describes current lines of work. Concrete outputs are separated below because an active research system is not the same thing as a finished or published artifact.</p>
+      </section>
+
+      <section id="outputs" aria-labelledby="outputs-title">
+        <div class="section-head">
+          <div class="label">Produced work</div>
+          <div>
+            <h2 id="outputs-title">Artifacts, not claims of completion.</h2>
+            <p>These outputs exist at different maturity levels. Their presence means that durable work has been produced; it does not imply that every underlying method has been fully validated or frozen.</p>
+          </div>
+        </div>
+
+        <div class="outputs">
+          <article>
+            <h3>Hybrid Multicloud Infrastructure for Mission-Critical IT</h3>
+            <p>A working book manuscript and planning framework connecting resilient infrastructure, business continuity, data governance, confidential computing, and hybrid multi-cloud architecture.</p>
+          </article>
+          <article>
+            <h3>Knowledge Fabric</h3>
+            <p>A structured semantic architecture and research corpus for claims, evidence, provenance, cases, reproducible reasoning state, and portable runtime boundaries; implementation and validation remain ongoing.</p>
+          </article>
+          <article>
+            <h3>Risk-Guided Value Engineering</h3>
+            <p>A developing methodological body connecting compliance assessment, technology due diligence, RGTA, and MTQR. It is not yet a complete validated specification.</p>
+          </article>
+          <article>
+            <h3>HPCC64 framework</h3>
+            <p>The Human · Purpose · Cognition · Control system view together with six system domains and four recurring decision criteria.</p>
+          </article>
+        </div>
       </section>
 
       <section id="identity" aria-labelledby="identity-title">
