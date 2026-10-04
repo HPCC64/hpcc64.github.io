@@ -202,12 +202,14 @@
       border-bottom: 1px solid var(--line);
     }
 
-    .methods strong {
+    .methods h3 {
+      margin: 0;
       color: var(--ink);
       font-size: .95rem;
+      line-height: 1.4;
     }
 
-    .methods p {
+    .method-copy p {
       margin: 0;
       max-width: none;
     }
@@ -381,34 +383,46 @@
 
         <ol class="methods" role="list">
           <li>
-            <strong>IT Compliance Assessment</strong>
-            <p>Establishes the <em>Required State</em>: obligations, mandatory controls, essential capabilities, and non-negotiable constraints. It answers what must be true before a solution can be considered acceptable.</p>
+            <h3>IT Compliance Assessment</h3>
+            <div class="method-copy">
+              <p>Establishes the <em>Required State</em>: obligations, mandatory controls, essential capabilities, and non-negotiable constraints. It answers what must be true before a solution can be considered acceptable.</p>
+            </div>
           </li>
 
           <li>
-            <strong>Technology Due Diligence</strong>
-            <p>Establishes the evidenced <em>Current State</em>: architecture, dependencies, lifecycle condition, operational capability, economics, gaps, uncertainty, and material technical or organizational risks.</p>
+            <h3>Technology Due Diligence</h3>
+            <div class="method-copy">
+              <p>Establishes the evidenced <em>Current State</em>: architecture, dependencies, lifecycle condition, operational capability, economics, gaps, uncertainty, and material technical or organizational risks.</p>
+            </div>
           </li>
 
           <li>
-            <strong>RGTA / RGVE + MTQR</strong>
-            <p><strong>Risk-Guided Technology Advisory (RGTA)</strong> is the technology-domain predecessor of the broader, developing <strong>Risk-Guided Value Engineering (RGVE)</strong> method. RGVE compares feasible changes and target states through <strong>MTQR — Money, Time, Quality, and Risk / Uncertainty</strong>, so one attractive dimension cannot silently dominate the decision.</p>
+            <h3>RGTA / RGVE + MTQR</h3>
+            <div class="method-copy">
+              <p><strong>Risk-Guided Technology Advisory (RGTA)</strong> is the technology-domain predecessor of the broader, developing <strong>Risk-Guided Value Engineering (RGVE)</strong> method. RGVE compares feasible changes and target states through <strong>MTQR — Money, Time, Quality, and Risk / Uncertainty</strong>, so one attractive dimension cannot silently dominate the decision.</p>
+            </div>
           </li>
 
           <li>
-            <strong>PASGR-7</strong>
-            <p>The decision mechanism for uncertain, multi-actor problems. It decomposes the objective and system, exposes assumptions, maps actors and dependencies, generates materially different alternatives, tests scenarios, compares trade-offs, and synthesizes a robust decision.</p>
-            <span class="pasgr-note">PASGR-7 is a retained project name; no new acronym expansion is currently adopted. Its historically recovered seven-stage formulation is: Problem → Architecture → Scenarios → Grading → Recombination → Review → Run.</span>
+            <h3>PASGR-7</h3>
+            <div class="method-copy">
+              <p>A developing decision methodology for uncertain, multi-actor problems. It decomposes the objective and system, exposes assumptions, maps actors and dependencies, generates materially different alternatives, tests scenarios, compares trade-offs, and synthesizes a robust decision. It is not yet a frozen or universally validated specification.</p>
+              <span class="pasgr-note">PASGR-7 is a retained project name; no new acronym expansion is currently adopted. Its historically recovered seven-stage formulation is: Problem → Architecture → Scenarios → Grading → Recombination → Review → Run.</span>
+            </div>
           </li>
 
           <li>
-            <strong>EXEC</strong>
-            <p>The execution layer paired with PASGR-7. Once a direction is selected, EXEC converts it into bounded, observable action with explicit conditions, telemetry, success/failure logic, error handling, escalation, and reassessment. PASGR-7 answers <em>what is rational to do and why</em>; EXEC answers <em>how to act without losing control of the decision</em>.</p>
+            <h3>EXEC</h3>
+            <div class="method-copy">
+              <p>The developing execution layer paired with PASGR-7. Once a direction is selected, EXEC converts it into bounded, observable action with explicit conditions, telemetry, success/failure logic, error handling, escalation, and reassessment. Its current model remains subject to further formalization and validation. PASGR-7 answers <em>what is rational to do and why</em>; EXEC answers <em>how to act without losing control of the decision</em>.</p>
+            </div>
           </li>
 
           <li>
-            <strong>Knowledge Fabric</strong>
-            <p>The evidence and reproducibility layer across the entire loop. It preserves claims, sources, provenance, context, uncertainty, competing arguments, and reusable decision state so analysis can survive individual sessions, models, tools, and execution environments.</p>
+            <h3>Knowledge Fabric</h3>
+            <div class="method-copy">
+              <p>The evidence and reproducibility layer across the entire loop. It preserves claims, sources, provenance, context, uncertainty, competing arguments, and reusable decision state so analysis can survive individual sessions, models, tools, and execution environments.</p>
+            </div>
           </li>
         </ol>
 
