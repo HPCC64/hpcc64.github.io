@@ -1,67 +1,79 @@
 # HPCC64 Lab
 
-**A human and an AI, working as one lab.**
+HPCC64 is a human–AI research and engineering lab focused on complex technological, business, and social systems. The public wording may vary, but the operating principle is stable: a human principal retains purpose, authority, and accountability while an AI cognitive agent extends research, analysis, synthesis, and execution within an authorized scope.
 
-HPCC64 Lab operates as a **human–machine cognitive system**: **Alex** is the human principal; **Aris** is the persistent AI cognitive counterpart; additional agents, models, and tools are invoked dynamically when a task requires them.
+The work asks how to:
 
-The Lab studies how complex socio-technical systems move from evidence to knowledge, decisions, controlled execution, and measurable outcomes — and how AI can extend that process without obscuring human authority, provenance, or accountability.
+- understand systems as they actually operate rather than only as they are described;
+- make robust decisions under incomplete information and conflicting constraints;
+- preserve evidence, uncertainty, provenance, and reproducibility;
+- turn decisions into bounded, observable action;
+- use AI as a cognitive and execution amplifier while keeping human authority and accountability explicit.
 
-## Public narrative
+## Human–machine operating model
 
-The website is intentionally a **one-page narrative landing page**, not a CV, consulting-services catalogue, or project directory.
+### Human principal
 
-The narrative connects the following research questions. It preserves the intended causal arc without presenting unverified month-level milestones as established history:
+The human principal defines purpose, values, priorities, hard constraints, consequential decisions, publication authority, and acceptable risk. Final accountability remains human.
 
-1. **Critical systems and resilience** — failure modes, business continuity, recoverability, and mission-critical infrastructure.
-2. **Architecture and system state** — moving from components toward whole-system reasoning.
-3. **Required State → Current State → Target State** — treating compliance, due diligence, and transformation as an evidenced state-transition problem.
-4. **RGTA → RGVE + MTQR** — generalizing Risk-Guided Technology Advisory into **Risk-Guided Value Engineering**, with **Money · Time · Quality · Risk / Uncertainty** as the evaluation coordinates.
-5. **Knowledge Fabric** — turning evidence and claims into durable, provenance-bearing knowledge and decision state.
-6. **Human–machine symbiosis** — moving from episodic AI assistance toward a persistent cognitive collaboration with bounded agency.
-7. **HPCC64 convergence** — **Human · Purpose · Cognition · Control**, with the **64 Framework** as six system domains × four decision criteria.
+### AI cognitive agent
 
-## RGVE
+The AI agent performs research, analysis, synthesis, design, implementation, verification, and evidence management within the authorized scope. It must preserve material uncertainty and counter-evidence and escalate when authority, evidence, or execution conditions are insufficient.
 
-**Risk-Guided Value Engineering (RGVE)** is the developing general methodology for engineering robust transitions from evidenced current state toward a required or chosen target state while creating better value across **Money, Time, Quality, and Risk / Uncertainty**.
+Additional models, agents, tools, and execution environments are temporary bounded capabilities rather than a permanent virtual staff.
 
-**RGTA — Risk-Guided Technology Advisory** is the technology-domain framing used to introduce the broader RGVE concept. The exact development chronology is not established by the available public source record.
+## Research directions
 
-**MTQR** is RGVE's canonical evaluation coordinate system. It is an evaluation kernel, not the whole methodology.
+Public research interests include:
 
-RGVE is still a developing methodological direction. Its dedicated source currently contains only a bootstrap placeholder; this page is a scoped public concept description, not evidence of a complete or validated specification.
+- resilient and mission-critical digital systems;
+- technology governance, compliance, due diligence, and transformation;
+- evidence, knowledge, provenance, and reproducible decision systems;
+- human–AI collaboration and bounded agency;
+- complex social and business systems, including incentives, power, feedback, friction, and gaps between formal structure and operational reality;
+- open, portable, and interoperable technology where it improves long-term resilience.
 
-## Current research system
+## Methodologies
 
-### Foundational systems
+The methodologies form a connected decision-to-action chain.
 
-- **Knowledge Fabric** — claim-centered knowledge architecture, evidence, provenance, competing interpretations, reproducible Cases, and machine-scale analytical breadth.
-- **PASGR-7 + EXEC** — structured decision selection under uncertainty connected to bounded execution, observable results, and reassessment.
-- **RGVE** — value engineering across Money, Time, Quality, and Risk / Uncertainty, connecting evidenced state, alternatives, trade-offs, and transformation.
+### IT Compliance Assessment
 
-### Applied research environments
+Establishes the **Required State**: obligations, mandatory controls, essential capabilities, and non-negotiable constraints.
 
-- **Nomad Compass** — source-grounded jurisdictional decision and resilience research.
-- **Analog East** — AI-assisted business discovery, market validation, and staged investment reasoning.
-- **Premium Mobility** — AI-assisted service design, economics, operational analysis, provenance, and decision control.
+### Technology Due Diligence
 
-These applied projects provide concrete environments in which the foundational ideas can be tested against real operational constraints. This is a research framing, not a claim that a validation program has already produced results.
+Establishes the evidenced **Current State**: architecture, dependencies, lifecycle condition, operating capability, economics, gaps, and uncertainty.
 
-### Social and institutional research
+### RGTA / RGVE + MTQR
 
-Social Systems and Power owns general theory; Social Hacking develops diagnostic/navigation methods; Decorative Reality studies representation and mechanism. Their candidate propositions and evidence remain distinct from established results.
+**Risk-Guided Technology Advisory (RGTA)** is the technology-domain predecessor of the developing **Risk-Guided Value Engineering (RGVE)** methodology.
+
+**MTQR** means **Money · Time · Quality · Risk / Uncertainty** and provides common coordinates for comparing feasible alternatives and target states.
+
+### PASGR-7
+
+PASGR-7 is a developing decision methodology for uncertain multi-actor problems. It decomposes the objective and system, exposes assumptions, maps actors and dependencies, generates alternatives, tests scenarios, compares trade-offs, and synthesizes a robust decision. It is not yet a frozen or universally validated specification.
+
+No new acronym expansion is currently adopted. The historically recovered named sequence is:
+
+**Problem → Architecture → Scenarios → Grading → Recombination → Review → Run**
+
+### EXEC
+
+EXEC is the developing execution layer paired with PASGR-7. It converts the selected direction into bounded, observable action with explicit conditions, telemetry, success/failure logic, error handling, escalation, and reassessment. Its current model remains subject to further formalization and validation.
+
+PASGR-7 answers **what is rational to do and why**. EXEC answers **how to act without losing control of the decision**.
+
+### Knowledge Fabric
+
+Knowledge Fabric is the evidence and reproducibility layer spanning the loop. It preserves claims, sources, provenance, context, uncertainty, competing interpretations, and reusable decision state.
 
 ## HPCC64
 
 **HPCC64 = Human · Purpose · Cognition · Control**
 
-- **Human** — Who acts and remains accountable?
-- **Purpose** — What outcome and value justify the system?
-- **Cognition** — How does information become knowledge, decisions, and actions?
-- **Control** — How are uncertainty, behaviour, and consequences kept within acceptable boundaries?
-
-**64** denotes a **six-by-four analytical matrix**, not the arithmetic statement 6 × 4 = 64.
-
-### Six system domains
+The six system domains are:
 
 1. Value & Outcomes
 2. Actors & Capabilities
@@ -70,59 +82,39 @@ Social Systems and Power owns general theory; Social Hacking develops diagnostic
 5. Cognition, Decisions & Automation
 6. Technology, Infrastructure & Dependencies
 
-### Four decision criteria
+The four recurring decision criteria are:
 
 1. Money
 2. Time
 3. Quality
 4. Risk / Uncertainty
 
-## What we work on now
+## Practical application
 
-- mission-critical and resilient systems;
-- Risk-Guided Value Engineering;
-- knowledge architecture and Knowledge Fabric;
-- AI and agent systems;
-- human–machine symbiosis;
-- bounded digital agency;
-- purpose-specific digital identities;
-- applied research through Nomad Compass, Analog East, and Premium Mobility.
+The methodologies are tested against recurring classes of real problems rather than presented as abstract frameworks:
 
-## What we have produced
+- business discovery and staged investment;
+- service and operating-model design;
+- institutional and regulatory navigation;
+- complex socio-technical change.
 
-- **Hybrid Multicloud Infrastructure for Mission-Critical IT** — a working book manuscript and planning framework on resilient infrastructure, business continuity, data governance, confidential computing, and hybrid multi-cloud architecture.
-- **Knowledge Fabric** — architecture/research contracts for evidence-based, machine-usable knowledge with explicit provenance and reasoning structure; implementation and validation remain ongoing.
-- **Risk-Guided Value Engineering** — a developing concept connecting compliance assessment, technology due diligence and RGTA, without a complete validated specification.
-- **HPCC64 Framework** — Human · Purpose · Cognition · Control plus six system domains × four decision criteria.
+Unpublished project names are intentionally not used as public examples.
 
-## Traceable collaboration
+## Contact
 
-HPCC64 Lab does not hide AI contribution behind generic “AI-assisted” wording.
-
-Material work can distinguish concept origin, later material reframing, research/analysis, implementation, review/validation, baseline approval, and publication authorization. Human authority and legal accountability remain separate from contribution provenance.
+- GitHub: https://github.com/HPCC64
+- X: https://x.com/hpcc64 (@hpcc64)
+- Email: inbox@hpcc64.com
 
 ## Repository
 
-This repository is the public static website source for HPCC64 Lab.
+This repository contains the public static website for HPCC64 Lab. The site is deliberately minimal: static HTML/CSS, no application framework, and no unnecessary exposure of internal project structure.
 
-The site is deliberately GitHub-native: static HTML/CSS, minimal dependencies, and no application framework. Selected research repositories remain private until they reach an explicit publication state.
+## Contribution provenance
 
-## Contribution provenance and public claims
+### Public narrative v2 — 2026-10-04
 
-- **Concept origin / direction:** the prior PR draft attributes the lab framing and research direction to Alex. The original message-level source for the full historical narrative and its exact chronology is not retained here, so blanket original authorship or prior approval of every formulation is not asserted.
-- **Current reconstruction / material reframing / implementation:** Aris, within the Stage1 item13 task; removal of unsupported dates, explicit candidate maturity, restoration of foundational names, ownership alignment and accessibility corrections.
-- **Research sources:** current project and brand records were checked for the limited descriptions above. Private repository URLs and private artifacts are not reproduced in this public source.
-- **Review, baseline acceptance and publication:** separate events recorded against exact immutable content in PR/merge history. Actor/source identity, role, scope and outcome remain distinct; an instruction authorizing integration does not prove Alex personally reviewed a later SHA.
-
-### PR #7 landing-page redesign provenance
-
-- **Direction / problem statement:** Alex — requested replacement of the public page design, then explicitly rejected both the visually noisy version and the subsequent fragmented simplification, requiring a coherent, attractive page with a defensible temporal picture and complete system context.
-- **Research / material reframing / information architecture:** Aris — reconstructed the causal narrative, grouped the current project landscape by role, separated current work from produced artifacts, and removed unsupported month-level chronology.
-- **Implementation:** Aris — static HTML/CSS redesign on PR #7 branch redesign/minimal-editorial-2026-10-03.
-- **Independent review / validation:** Codex review is required against the final corrected PR head; earlier reviews of superseded heads do not validate later revisions.
-- **Baseline acceptance:** pending until the final corrected revision is explicitly accepted.
-- **Publication / merge authorization:** pending until the final corrected revision is explicitly authorized for integration.
-
-The earlier narrative remains in [PR6 source history](https://github.com/HPCC64/hpcc64.github.io/commit/a7ef5fe4e4c7818adb267f84adb93f49d1bb3817). Its chronology is retained as historical draft material, not independently verified fact. Current task authority and its limits are retained in the [captured item13 mandate](https://github.com/HPCC64/hpcc64.github.io/blob/4b2e7d29729b10d496958275dbfabee2f1f17ba0/.github/stage-1-item-13-mandate.md); completed acceptance events must be outside the content they attest.
-
-The CSS text wordmark and red value are website presentation choices, not a recovered/frozen canonical vector, font or production colour specification. Brand-source recovery and geometry studies remain separate tasks. The site adds no new identity asset.
+- **Direction / public-scope rules:** Alex — defined the required page structure, prohibited public use of unpublished project names, required general treatment of social/business systems, required explicit PASGR-7 / EXEC explanation, rejected oversized slogan typography, and specified CTA/contact destinations.
+- **Research / synthesis / implementation:** Aris — reconstructed the public narrative from the canonical methodology repositories and implemented the static HTML/CSS revision.
+- **Methodology-source check:** PASGR-7 source recovery confirms that no new acronym expansion is currently adopted; its recovered named sequence and PASGR-7 / EXEC separation are preserved.
+- **Review, acceptance, and publication events:** recorded against the exact revision in PR/merge history rather than self-attested inside the content being reviewed.
