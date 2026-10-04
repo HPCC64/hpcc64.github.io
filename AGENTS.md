@@ -4,9 +4,9 @@
 
 The public site represents **HPCC64 Lab as a human–AI research and engineering system**.
 
-Use the public-facing formulation:
+The public wording is **not fixed to one slogan or sentence**. It must preserve the semantic invariant: HPCC64 is a human–AI symbiotic research and engineering system in which a human principal retains purpose, authority, and accountability while an AI cognitive agent extends research, analysis, synthesis, design, implementation, and verification within an authorized scope.
 
-> **A human and an AI, working as one lab.**
+Acceptable public phrasing may vary by context and design. Do not require or mechanically restore any specific slogan if the same meaning is expressed clearly.
 
 The operating model is:
 
@@ -53,7 +53,7 @@ The site may explain the following named methodologies because they are part of 
 - **EXEC** — execution layer paired with PASGR-7; turns a selected direction into bounded, observable action with evidence, success/failure logic, error handling, escalation, and reassessment.
 - **Knowledge Fabric** — evidence/provenance/reproducibility layer spanning the decision loop.
 
-Treat RGVE and PASGR-7 + EXEC as developing methodologies, not fully validated universal specifications.
+Treat RGVE, PASGR-7, and EXEC as developing methodologies/systems. Do not present any of them as frozen, fully validated, or universally applicable specifications.
 
 ## Visual constraints
 
