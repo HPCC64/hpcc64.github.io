@@ -1,8 +1,6 @@
 # HPCC64 Lab
 
-**A human and an AI, working as one lab.**
-
-HPCC64 is a human–AI research and engineering lab focused on complex technological, business, and social systems.
+HPCC64 is a human–AI research and engineering lab focused on complex technological, business, and social systems. The public wording may vary, but the operating principle is stable: a human principal retains purpose, authority, and accountability while an AI cognitive agent extends research, analysis, synthesis, and execution within an authorized scope.
 
 The work asks how to:
 
@@ -55,7 +53,7 @@ Establishes the evidenced **Current State**: architecture, dependencies, lifecyc
 
 ### PASGR-7
 
-PASGR-7 is the decision mechanism for uncertain multi-actor problems. It decomposes the objective and system, exposes assumptions, maps actors and dependencies, generates alternatives, tests scenarios, compares trade-offs, and synthesizes a robust decision.
+PASGR-7 is a developing decision methodology for uncertain multi-actor problems. It decomposes the objective and system, exposes assumptions, maps actors and dependencies, generates alternatives, tests scenarios, compares trade-offs, and synthesizes a robust decision. It is not yet a frozen or universally validated specification.
 
 No new acronym expansion is currently adopted. The historically recovered named sequence is:
 
@@ -63,7 +61,7 @@ No new acronym expansion is currently adopted. The historically recovered named 
 
 ### EXEC
 
-EXEC is the execution layer paired with PASGR-7. It converts the selected direction into bounded, observable action with explicit conditions, telemetry, success/failure logic, error handling, escalation, and reassessment.
+EXEC is the developing execution layer paired with PASGR-7. It converts the selected direction into bounded, observable action with explicit conditions, telemetry, success/failure logic, error handling, escalation, and reassessment. Its current model remains subject to further formalization and validation.
 
 PASGR-7 answers **what is rational to do and why**. EXEC answers **how to act without losing control of the decision**.
 
@@ -105,7 +103,7 @@ Unpublished project names are intentionally not used as public examples.
 ## Contact
 
 - GitHub: https://github.com/HPCC64
-- X: @hpcc64
+- X: https://x.com/hpcc64 (@hpcc64)
 - Email: inbox@hpcc64.com
 
 ## Repository
