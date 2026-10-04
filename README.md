@@ -114,6 +114,15 @@ The site is deliberately GitHub-native: static HTML/CSS, minimal dependencies, a
 - **Research sources:** current project and brand records were checked for the limited descriptions above. Private repository URLs and private artifacts are not reproduced in this public source.
 - **Review, baseline acceptance and publication:** separate events recorded against exact immutable content in PR/merge history. Actor/source identity, role, scope and outcome remain distinct; an instruction authorizing integration does not prove Alex personally reviewed a later SHA.
 
+### PR #7 landing-page redesign provenance
+
+- **Direction / problem statement:** Alex — requested replacement of the public page design, then explicitly rejected both the visually noisy version and the subsequent fragmented simplification, requiring a coherent, attractive page with a defensible temporal picture and complete system context.
+- **Research / material reframing / information architecture:** Aris — reconstructed the causal narrative, grouped the current project landscape by role, separated current work from produced artifacts, and removed unsupported month-level chronology.
+- **Implementation:** Aris — static HTML/CSS redesign on PR #7 branch redesign/minimal-editorial-2026-10-03.
+- **Independent review / validation:** Codex review is required against the final corrected PR head; earlier reviews of superseded heads do not validate later revisions.
+- **Baseline acceptance:** pending until the final corrected revision is explicitly accepted.
+- **Publication / merge authorization:** pending until the final corrected revision is explicitly authorized for integration.
+
 The earlier narrative remains in [PR6 source history](https://github.com/HPCC64/hpcc64.github.io/commit/a7ef5fe4e4c7818adb267f84adb93f49d1bb3817). Its chronology is retained as historical draft material, not independently verified fact. Current task authority and its limits are retained in the [captured item13 mandate](https://github.com/HPCC64/hpcc64.github.io/blob/4b2e7d29729b10d496958275dbfabee2f1f17ba0/.github/stage-1-item-13-mandate.md); completed acceptance events must be outside the content they attest.
 
 The CSS text wordmark and red value are website presentation choices, not a recovered/frozen canonical vector, font or production colour specification. Brand-source recovery and geometry studies remain separate tasks. The site adds no new identity asset.
