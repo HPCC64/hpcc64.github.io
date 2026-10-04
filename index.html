@@ -3,387 +3,385 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="HPCC64 Lab — a human and an AI, working as one lab. Research on resilience, RGVE, knowledge, decisions, and human–machine cognitive systems.">
-  <title>HPCC64 Lab — A human and an AI, working as one lab</title>
+  <meta name="description" content="HPCC64 Lab — research on resilient digital systems, decision engineering, knowledge infrastructure, and human–AI collaboration.">
+  <title>HPCC64 Lab — From resilient systems to human–AI collaboration</title>
   <style>
     :root {
       --paper: #fff;
-      --ink: #000;
-      --muted: #555;
-      --line: #d8d8d8;
-      --accent: #d40000;
+      --ink: #111;
+      --soft-ink: #383838;
+      --muted: #707070;
+      --line: #e6e6e6;
+      --accent: #c5161d;
+      --page: 1040px;
+      --measure: 70ch;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.55;
       color-scheme: light;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-size: 16px; line-height: 1.62; }
+    a { color: inherit; text-underline-offset: 3px; }
     :focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
-    .skip-link { position: absolute; top: -100px; left: 12px; padding: 12px; background: var(--paper); z-index: 1; }
+    .skip-link { position: absolute; top: -100px; left: 16px; z-index: 10; padding: 10px 12px; background: var(--ink); color: var(--paper); }
     .skip-link:focus { top: 12px; }
-    body { margin: 0; background: var(--paper); color: var(--ink); }
-    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    .shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-    .topbar {
-      display: flex; align-items: center; justify-content: space-between; gap: 24px;
-      padding: 26px 0; border-bottom: 1px solid var(--line);
-    }
-    .wordmark {
-      font-size: 1.35rem; font-weight: 950; letter-spacing: -0.045em;
-      text-decoration: none; white-space: nowrap;
-    }
+    .shell { width: min(var(--page), calc(100% - 56px)); margin: 0 auto; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 32px; min-height: 76px; border-bottom: 1px solid var(--line); }
+    .wordmark { font-size: 1.04rem; font-weight: 760; letter-spacing: -0.035em; text-decoration: none; white-space: nowrap; }
     .accent { color: var(--accent); }
-    nav { display: flex; flex-wrap: wrap; gap: 18px; font-size: .9rem; }
-    main { padding-bottom: 96px; }
-    .hero {
-      min-height: 72vh; display: grid; align-content: center;
-      padding: 88px 0 72px; border-bottom: 1px solid var(--line);
-    }
-    .kicker, .date, .label {
-      font-size: .78rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
-    }
-    .hero h1 {
-      max-width: 1000px; margin: 14px 0 24px;
-      font-size: clamp(3rem, 8vw, 7rem); line-height: .94; letter-spacing: -0.065em;
-    }
-    .lede { max-width: 850px; margin: 0; font-size: clamp(1.1rem, 2.3vw, 1.45rem); }
-    .pair {
-      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1px; margin-top: 40px; background: var(--line); border: 1px solid var(--line);
-    }
-    .pair article { background: var(--paper); padding: 24px; }
-    .pair h2 { margin: 0 0 6px; font-size: 1rem; }
-    .semantic-strip {
-      padding: 28px 0; border-bottom: 1px solid var(--line);
-      font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 750;
-    }
-    section.major { padding: 88px 0; border-bottom: 1px solid var(--line); }
-    section.major > header {
-      display: grid; grid-template-columns: minmax(160px, 240px) 1fr;
-      gap: 32px; margin-bottom: 46px;
-    }
-    section.major h2 {
-      margin: 0; font-size: clamp(2rem, 5vw, 4.2rem);
-      line-height: 1; letter-spacing: -0.05em;
-    }
-    section.major header p { max-width: 760px; margin: 0; font-size: 1.08rem; }
-    .timeline { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
-    .timeline li {
-      display: grid; grid-template-columns: minmax(110px, 150px) minmax(0, 1fr);
-      gap: 32px; padding: 34px 0; border-bottom: 1px solid var(--line);
-    }
-    .timeline h3 { margin: 0 0 9px; font-size: 1.35rem; }
-    .timeline p { max-width: 780px; margin: 0; }
-    .state-flow {
-      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-      border: 1px solid var(--ink); margin-top: 34px;
-    }
-    .state-flow article { padding: 26px; min-height: 170px; border-right: 1px solid var(--ink); }
-    .state-flow article:last-child { border-right: 0; }
-    .state-flow h3 { margin: 0 0 10px; }
-    .formula {
-      margin: 28px 0 0; padding: 22px 0;
-      border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink);
-      font-size: clamp(1.2rem, 3vw, 2rem); font-weight: 800; letter-spacing: -0.03em;
-    }
-    .criteria, .domains, .outputs {
-      display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line);
-    }
-    .criteria { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .domains { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .outputs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .criteria article, .domains article, .outputs article { background: var(--paper); padding: 22px; }
-    .criteria h3, .domains h4, .outputs h3 { margin: 0 0 8px; font-size: 1rem; }
-    .sequence {
-      display: flex; flex-wrap: wrap; align-items: center;
-      gap: 9px; margin: 34px 0; font-weight: 800;
-    }
-    .sequence span { border: 1px solid var(--ink); padding: 8px 11px; }
-    .sequence b { font-weight: 500; }
-    .note { max-width: 800px; color: var(--muted); font-size: .92rem; }
-    .quote {
-      max-width: 920px; margin: 44px 0 0;
-      font-size: clamp(1.7rem, 4vw, 3.4rem); line-height: 1.05;
-      letter-spacing: -0.045em; font-weight: 850;
-    }
-    .hpcc {
-      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
-      margin-top: 34px; border: 1px solid var(--ink);
-    }
-    .hpcc article { padding: 24px; border-right: 1px solid var(--ink); }
-    .hpcc article:last-child { border-right: 0; }
-    .hpcc strong { display: block; margin-bottom: 8px; font-size: 1.25rem; }
-    .why64 {
-      margin-top: 54px; display: grid;
-      grid-template-columns: minmax(180px, .7fr) 1.3fr; gap: 34px; align-items: start;
-    }
-    .big64 {
-      font-size: clamp(7rem, 20vw, 15rem); line-height: .72;
-      font-weight: 950; letter-spacing: -.09em; color: var(--accent);
-    }
-    .why64 h3 { margin-top: 0; }
-    footer { padding: 40px 0 64px; font-size: .9rem; color: var(--muted); }
+    nav { display: flex; flex-wrap: wrap; gap: 22px; font-size: .82rem; color: var(--muted); }
+    nav a { text-decoration: none; }
+    nav a:hover { color: var(--ink); }
 
-    @media (max-width: 800px) {
-      .topbar { align-items: flex-start; flex-direction: column; }
-      section.major > header, .timeline li, .why64 { grid-template-columns: 1fr; }
-      .pair, .criteria, .domains, .outputs, .hpcc, .state-flow { grid-template-columns: 1fr; }
-      .hpcc article, .state-flow article { border-right: 0; border-bottom: 1px solid var(--ink); }
-      .hpcc article:last-child, .state-flow article:last-child { border-bottom: 0; }
-      .hero { min-height: auto; }
+    .eyebrow, .label, .period { font-size: .7rem; font-weight: 720; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .hero { padding: 120px 0 108px; border-bottom: 1px solid var(--line); }
+    .hero h1 { max-width: 930px; margin: 18px 0 28px; font-size: clamp(3.4rem, 7.8vw, 6.3rem); line-height: .94; letter-spacing: -0.064em; font-weight: 700; }
+    .hero .lede { max-width: 760px; margin: 0; color: var(--soft-ink); font-size: clamp(1.08rem, 2vw, 1.28rem); }
+    .hero .statement { max-width: 760px; margin: 52px 0 0; padding-top: 20px; border-top: 1px solid var(--ink); font-size: .94rem; font-weight: 650; }
+
+    section { padding: 94px 0; border-bottom: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 44px; margin-bottom: 52px; }
+    .section-head h2 { max-width: 790px; margin: 0; font-size: clamp(2.15rem, 4.8vw, 4rem); line-height: 1.01; letter-spacing: -0.048em; font-weight: 670; }
+    .section-head p { max-width: var(--measure); margin: 20px 0 0; color: var(--soft-ink); }
+
+    .timeline { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
+    .timeline li { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 44px; padding: 30px 0 34px; border-bottom: 1px solid var(--line); }
+    .timeline h3 { margin: 0 0 8px; font-size: 1.1rem; font-weight: 700; letter-spacing: -0.015em; }
+    .timeline p { max-width: var(--measure); margin: 0; color: #444; }
+
+    .system-stack { border-top: 1px solid var(--ink); }
+    .layer { display: grid; grid-template-columns: 70px 210px minmax(0, 1fr); gap: 28px; padding: 28px 0 30px; border-bottom: 1px solid var(--line); }
+    .layer-number { font-size: .78rem; color: var(--muted); }
+    .layer h3 { margin: 0; font-size: 1rem; font-weight: 700; }
+    .layer p { max-width: 670px; margin: 0; color: #444; }
+    .layer strong { color: var(--ink); }
+
+    .landscape { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 38px; padding-top: 26px; border-top: 1px solid var(--ink); }
+    .landscape h3 { margin: 0 0 20px; font-size: 1rem; font-weight: 700; }
+    .landscape ul { margin: 0; padding: 0; list-style: none; }
+    .landscape li { padding: 13px 0; border-top: 1px solid var(--line); color: #444; font-size: .94rem; }
+    .landscape li:first-child { border-top: 0; padding-top: 0; }
+    .landscape strong { display: block; color: var(--ink); }
+    .output-note { max-width: var(--measure); margin: 48px 0 0; color: var(--muted); font-size: .9rem; }
+    .outputs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 44px; border-top: 1px solid var(--ink); }
+    .outputs article { padding: 24px 0 26px; border-bottom: 1px solid var(--line); }
+    .outputs h3 { margin: 0 0 8px; font-size: 1rem; }
+    .outputs p { margin: 0; color: #444; font-size: .94rem; }
+
+    .identity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; padding-top: 28px; border-top: 1px solid var(--ink); }
+    .identity-grid h3 { margin: 0 0 12px; font-size: 1rem; }
+    .identity-grid p { max-width: 52ch; margin: 0; color: #444; }
+    .identity-mark { margin-top: 56px; display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 48px; align-items: start; padding-top: 28px; border-top: 1px solid var(--line); }
+    .big64 { color: var(--accent); font-size: clamp(5.5rem, 12vw, 9rem); line-height: .78; letter-spacing: -.075em; font-weight: 760; }
+    .identity-mark h3 { margin: 0 0 10px; font-size: 1.12rem; }
+    .identity-mark p { max-width: 58ch; margin: 0 0 20px; color: #444; }
+    .matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .matrix h4 { margin: 0 0 8px; font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+    .matrix ol { margin: 0; padding-left: 1.15rem; color: #444; font-size: .9rem; }
+
+    .lab-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 52px; padding-top: 28px; border-top: 1px solid var(--ink); }
+    .lab-pair h3 { margin: 0 0 10px; font-size: 1rem; }
+    .lab-pair p { margin: 0; color: #444; }
+    .lab-note { max-width: var(--measure); margin: 42px 0 0; color: var(--muted); font-size: .9rem; }
+
+    .closing { padding: 82px 0 92px; border-bottom: 0; }
+    .closing p { max-width: 760px; margin: 0; font-size: clamp(1.55rem, 3.7vw, 2.9rem); line-height: 1.12; letter-spacing: -0.035em; font-weight: 620; }
+    footer { padding: 34px 0 54px; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+
+    @media (max-width: 780px) {
+      .shell { width: min(100% - 32px, var(--page)); }
+      .topbar { align-items: flex-start; flex-direction: column; justify-content: center; gap: 10px; padding: 18px 0; }
+      nav { gap: 14px; }
+      .hero { padding: 84px 0 76px; }
+      .hero h1 { font-size: clamp(3rem, 13vw, 5rem); }
+      section { padding: 70px 0; }
+      .section-head, .timeline li, .layer, .identity-mark { grid-template-columns: 1fr; }
+      .section-head, .timeline li, .layer { gap: 12px; }
+      .landscape, .identity-grid, .lab-pair, .matrix, .outputs { grid-template-columns: 1fr; }
+      .landscape, .identity-grid, .lab-pair { gap: 34px; }
+      .identity-mark { gap: 28px; }
     }
     @media (max-width: 420px) {
-      .shell { width: min(100% - 24px, 1120px); }
-      .hero { padding-top: 64px; }
-      nav { gap: 12px; }
+      .shell { width: min(100% - 24px, var(--page)); }
     }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
+
   <div class="shell">
     <header class="topbar">
       <a class="wordmark" href="#top" aria-label="HPCC64 Lab home">HPCC<span class="accent">64</span></a>
       <nav aria-label="Page navigation">
-        <a href="#path">Path</a>
-        <a href="#rgve">RGVE</a>
-        <a href="#knowledge">Knowledge</a>
-        <a href="#hpcc64">HPCC64</a>
-        <a href="#work">Work</a>
+        <a href="#evolution">Evolution</a>
+        <a href="#system">System</a>
+        <a href="#lab">Lab</a>
+        <a href="#identity">HPCC64</a>
+        <a href="#landscape">Work</a>
+        <a href="#outputs">Outputs</a>
       </nav>
     </header>
 
     <main id="top" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="kicker">HPCC64 Lab</div>
-        <h1 id="hero-title">A human and an AI, working as one lab.</h1>
-        <p class="lede">HPCC64 Lab is a human–machine cognitive system: one human principal, one persistent AI cognitive counterpart, and additional agents, models, and tools invoked dynamically when the work requires them.</p>
-
-        <div class="pair" aria-label="Current lab participants">
-          <article>
-            <h2>Alex — human principal</h2>
-            <p>Sets purpose, values, constraints, and research direction. Makes consequential decisions and retains human accountability.</p>
-          </article>
-          <article>
-            <h2>Aris — AI cognitive counterpart</h2>
-            <p>Extends research, analysis, synthesis, design, and implementation while preserving evidence, uncertainty, and provenance.</p>
-          </article>
-        </div>
+        <div class="eyebrow">HPCC64 Lab · research trajectory</div>
+        <h1 id="hero-title">From resilient systems to human–AI collaboration.</h1>
+        <p class="lede">HPCC64 Lab is an ongoing research and engineering program about how complex digital systems survive failure, how evidence becomes defensible decisions, and how humans and AI can work together without losing control, provenance, or accountability.</p>
+        <p class="statement">A human and an AI, working as one lab.</p>
       </section>
 
-      <div class="semantic-strip">
-        Human · Purpose · Cognition · Control &nbsp;—&nbsp; [ 6 System Domains ] × [ 4 Decision Criteria ]
-      </div>
-
-      <section class="major" id="path" aria-labelledby="path-title">
-        <header>
-          <div class="label">The path</div>
+      <section id="evolution" aria-labelledby="evolution-title">
+        <div class="section-head">
+          <div class="label">Evolution</div>
           <div>
-            <h2 id="path-title">From resilience to cognition.</h2>
-            <p>The research connects a sequence of practical questions: how to keep critical systems alive, understand what a system must become, engineer value under constraints, turn evidence into decisions, and organize human–AI work. This is a conceptual path through the work, not a dated history of completed milestones.</p>
+            <h2 id="evolution-title">The work did not begin with AI.</h2>
+            <p>It grew from a long-running engineering question: how to keep mission-critical information systems useful when components, assumptions, organizations, or plans fail. The later methodologies are extensions of that same problem.</p>
           </div>
-        </header>
+        </div>
 
         <ol class="timeline" role="list">
-          <li><div class="date">Resilience</div><div><h3>Resilience first</h3><p>Mission-critical IT provides the starting question: failure modes, business continuity, recoverability, and the idea that architecture should be judged by what happens when normal assumptions fail.</p></div></li>
-          <li><div class="date">Architecture</div><div><h3>From components to whole systems</h3><p>Move from individual infrastructure choices to architecture, lifecycle, dependencies, and mission-critical information systems as complete socio-technical systems.</p></div></li>
-          <li><div class="date">System state</div><div><h3>Required State → Current State → Target State</h3><p>Compliance, technology due diligence, and transformation share a structural problem: establish what is required, evidence what actually exists, then design the most defensible transition between the two.</p></div></li>
-          <li><div class="date">Value engineering</div><div><h3>From RGTA to RGVE</h3><p>Risk-Guided Technology Advisory is the technology-domain framing behind the developing Risk-Guided Value Engineering concept. It broadens the question from “Which technology?” to “Which feasible change creates the best value under explicit uncertainty and constraints?”</p></div></li>
-          <li><div class="date">Knowledge</div><div><h3>Knowledge becomes infrastructure</h3><p>The Evidence → Information → Knowledge → Insight → Decision → Action sequence motivates Knowledge Fabric: a claim-centered architecture for evidence, provenance, competing interpretations, reusable Cases, and machine-scale analytical breadth.</p></div></li>
-          <li><div class="date">Collaboration</div><div><h3>AI stops being just a tool</h3><p>The operating model aims for continuity beyond episodic AI assistance: a persistent principal/counterpart pair, with additional agents and tools used as bounded capabilities rather than as an autonomous organization.</p></div></li>
-          <li><div class="date">Identity</div><div><h3>Identity and bounded agency</h3><p>A continuing role needs a clear purpose, a traceable contribution record, and explicit limits on what it may decide or do. AI capabilities act within human-authorized scope; a persistent identity does not create independent authority.</p></div></li>
-          <li><div class="date">Convergence</div><div><h3>Human · Purpose · Cognition · Control</h3><p>The research, operating model, and brand meet in HPCC64. The 64 Framework organizes six system domains and four decision criteria into a compact analytical space.</p></div></li>
+          <li>
+            <div class="period">Research roots</div>
+            <div>
+              <h3>Fault tolerance, mission-critical IT, and resilience</h3>
+              <p>The research roots are in fault tolerance for distributed systems, followed by two decades of work around enterprise and mission-critical infrastructure. Business continuity, availability, recoverability, data lifecycle, and hybrid architecture established the first principle: systems should be judged by behaviour under failure, not by the elegance of individual components.</p>
+            </div>
+          </li>
+          <li>
+            <div class="period">2025–2026</div>
+            <div>
+              <h3>From infrastructure to system state</h3>
+              <p>Technology due diligence, compliance, and transformation work made the next problem explicit: separate what a system <em>must</em> be, what evidence shows it <em>is</em>, and what feasible target state can close the gap. This became the Required State → Current State → Target State pattern.</p>
+            </div>
+          </li>
+          <li>
+            <div class="period">2026 · advisory</div>
+            <div>
+              <h3>Risk-guided decision engineering</h3>
+              <p>Risk-Guided Technology Advisory (RGTA) connected state assessment to the choice between alternatives. Money, Time, Quality, and Risk / Uncertainty (MTQR) became the common coordinates for comparing value and trade-offs instead of optimizing one variable in isolation.</p>
+            </div>
+          </li>
+          <li>
+            <div class="period">2026 · knowledge</div>
+            <div>
+              <h3>Knowledge becomes infrastructure</h3>
+              <p>Early Knowledge-as-Code experiments evolved into Knowledge Fabric: evidence, atomic claims, provenance, competing interpretations, reusable cases, and reproducible analytical state. The focus moved from storing documents to preserving the structure needed to reconstruct reasoning.</p>
+            </div>
+          </li>
+          <li>
+            <div class="period">2026 · collaboration</div>
+            <div>
+              <h3>AI becomes part of the operating model</h3>
+              <p>The Lab moved beyond episodic AI assistance toward a persistent human principal / AI cognitive counterpart model. Additional models and agents became temporary bounded capabilities rather than a simulated permanent staff; identity, authorization, failure handling, and provenance became first-class design concerns.</p>
+            </div>
+          </li>
+          <li>
+            <div class="period">Current convergence</div>
+            <div>
+              <h3>Convergence into HPCC64</h3>
+              <p>RGTA broadened into Risk-Guided Value Engineering (RGVE), PASGR-7 connected decision structure to execution, and the different research branches converged around one system view: Human · Purpose · Cognition · Control. HPCC64 became the compact frame for the whole system rather than another isolated methodology.</p>
+            </div>
+          </li>
         </ol>
       </section>
 
-      <section class="major" aria-labelledby="states-title">
-        <header>
-          <div class="label">System change</div>
+      <section id="system" aria-labelledby="system-title">
+        <div class="section-head">
+          <div class="label">The system today</div>
           <div>
-            <h2 id="states-title">Evidence before transformation.</h2>
-            <p>A transformation is meaningful only if the required state, the actual current state, and the intended target state remain distinct. Otherwise plans optimize an imagined system rather than the one that exists.</p>
+            <h2 id="system-title">One chain from evidence to controlled action.</h2>
+            <p>The current work is easier to understand as one layered system. Each method owns a different part of the chain; none is intended to be a complete answer by itself.</p>
           </div>
-        </header>
-        <div class="state-flow">
-          <article><div class="label">1</div><h3>Required State</h3><p>Obligations, essential capabilities, viability conditions, and non-negotiable constraints.</p></article>
-          <article><div class="label">2</div><h3>Current State</h3><p>What evidence shows is actually present — including gaps, contradictions, dependencies, and uncertainty.</p></article>
-          <article><div class="label">3</div><h3>Target State</h3><p>The feasible configuration that closes the material gap while creating sufficient value.</p></article>
+        </div>
+
+        <div class="system-stack">
+          <article class="layer">
+            <div class="layer-number">01</div>
+            <h3>State & evidence</h3>
+            <p><strong>Compliance Assessment</strong>, <strong>Technology Due Diligence</strong>, and <strong>Required → Current → Target State</strong> establish obligations, facts, gaps, dependencies, and uncertainty before transformation begins.</p>
+          </article>
+          <article class="layer">
+            <div class="layer-number">02</div>
+            <h3>Value & choice</h3>
+            <p><strong>RGVE</strong> is the developing generalization of the earlier technology-domain RGTA approach; it remains under formalization and should not be read as a frozen or fully validated specification. <strong>MTQR</strong> provides Money · Time · Quality · Risk / Uncertainty as common decision coordinates.</p>
+          </article>
+          <article class="layer">
+            <div class="layer-number">03</div>
+            <h3>Decision & execution</h3>
+            <p><strong>PASGR-7 + EXEC</strong> connects structured decision selection to bounded execution, observable outcomes, reassessment, and explicit failure handling.</p>
+          </article>
+          <article class="layer">
+            <div class="layer-number">04</div>
+            <h3>Knowledge & reproducibility</h3>
+            <p><strong>Knowledge Fabric</strong> preserves claims, evidence, provenance, context, competing interpretations, and replayable analytical state so consequential reasoning does not disappear with a chat session, model change, or deleted program.</p>
+          </article>
+          <article class="layer">
+            <div class="layer-number">05</div>
+            <h3>Human–AI operation</h3>
+            <p>The Lab itself is a test environment for <strong>bounded agency</strong>, persistent role identity, ephemeral workers, explicit authorization, fault tolerance, and separation between cognitive topology and execution topology.</p>
+          </article>
         </div>
       </section>
 
-      <section class="major" id="rgve" aria-labelledby="rgve-title">
-        <header>
-          <div class="label">Value engineering</div>
+      
+      
+      
+      
+<section id="lab" aria-labelledby="lab-title">
+        <div class="section-head">
+          <div class="label">The Lab</div>
           <div>
-            <h2 id="rgve-title">RGVE: value under controlled uncertainty.</h2>
-            <p><strong>Risk-Guided Value Engineering</strong> is the developing general methodology for designing a robust transition from evidenced current state toward a required or chosen target state while engineering value across Money, Time, Quality, and Risk / Uncertainty.</p>
+            <h2 id="lab-title">A persistent partnership, not a virtual staff.</h2>
+            <p>HPCC64 Lab uses one stable human–AI cognitive pair. Other models, agents, runtimes, and tools are temporary capabilities introduced when a task needs parallelism, verification, isolation, permissions, or a specific execution environment.</p>
           </div>
-        </header>
-
-        <p class="formula">Evidence → Feasible State → Alternatives → Value / MTQR → Transformation</p>
-
-        <div class="criteria" aria-label="MTQR criteria">
-          <article><h3>Money</h3><p>Cost, value, capital, operating expense, revenue, and economic efficiency.</p></article>
-          <article><h3>Time</h3><p>Delivery time, lifecycle, recovery time, latency, and time-to-value.</p></article>
-          <article><h3>Quality</h3><p>Fitness for purpose, reliability, availability, performance, recoverability, and maintainability.</p></article>
-          <article><h3>Risk / Uncertainty</h3><p>Security, compliance, resilience, dependency, uncertainty, and adverse-outcome exposure.</p></article>
         </div>
 
-        <p class="note">MTQR is RGVE's evaluation coordinate system, not the whole methodology. RGVE is still being formalized and should not be read as a frozen or fully validated specification.</p>
-      </section>
-
-      <section class="major" id="knowledge" aria-labelledby="knowledge-title">
-        <header>
-          <div class="label">Knowledge</div>
-          <div>
-            <h2 id="knowledge-title">Reasoning needs durable state.</h2>
-            <p>Long-lived human–AI work cannot depend on conversational memory. Evidence, claims, assumptions, transformations, decisions, and their provenance need to survive individual sessions, models, tools, and providers.</p>
-          </div>
-        </header>
-
-        <div class="sequence" aria-label="Knowledge-to-action sequence">
-          <span>Evidence</span><b>→</b><span>Information</span><b>→</b><span>Knowledge</span><b>→</b><span>Insight</span><b>→</b><span>Decision</span><b>→</b><span>Action</span>
+        <div class="lab-pair">
+          <article>
+            <h3>Alex — human principal</h3>
+            <p>Sets purpose, values, constraints, research direction, and consequential decisions. Retains authority and accountability.</p>
+          </article>
+          <article>
+            <h3>Aris — AI cognitive counterpart</h3>
+            <p>Extends research, analysis, synthesis, design, implementation, and verification within the authorized scope while preserving evidence, uncertainty, and provenance.</p>
+          </article>
         </div>
 
-        <p>Knowledge Fabric develops that sequence as a claim-centered architecture: atomic Claims, explicit provenance, multiple frames, competing arguments, reproducible Cases, and a portable boundary between authored knowledge and execution runtimes.</p>
+        <p class="lab-note">The objective is not autonomous AI. It is a fault-tolerant human–machine research system in which cognition can be distributed while authority, state, provenance, and recovery remain explicit.</p>
       </section>
 
-      <section class="major" aria-labelledby="symbiosis-title">
-        <header>
-          <div class="label">Human–machine symbiosis</div>
+
+      <section id="identity" aria-labelledby="identity-title">
+        <div class="section-head">
+          <div class="label">HPCC64</div>
           <div>
-            <h2 id="symbiosis-title">One principal. One cognitive counterpart.</h2>
-            <p>The Lab itself is part of the research. Alex remains the human principal. Aris is the persistent AI cognitive counterpart. Additional agents, models, and tools are invoked dynamically for bounded tasks. Continuity depends on preserved project records, not uninterrupted model memory. Authority and accountability remain human; cognition can be distributed.</p>
+            <h2 id="identity-title">Human · Purpose · Cognition · Control.</h2>
+            <p>This is the shortest expression of the system: who remains responsible, why the system exists, how it turns evidence into decisions, and how behaviour and consequences remain within acceptable boundaries.</p>
           </div>
-        </header>
-
-        <p class="quote">A human and an AI, working as one lab.</p>
-      </section>
-
-      <section class="major" aria-labelledby="agency-title">
-        <header>
-          <div class="label">Identity and bounded agency</div>
-          <div>
-            <h2 id="agency-title">Continuity needs clear boundaries.</h2>
-            <p>A purpose-specific digital identity makes a role and its contribution history recognizable across tasks. Its continuity rests on records that can be inspected and carried forward, not on a claim of personhood or uninterrupted memory.</p>
-            <p>Bounded agency means that capabilities operate within explicit human authorization, constraints, and review conditions. When a task exceeds those limits, it returns to the human principal for a decision. Identity helps trace who contributed; it does not grant authority to publish, commit resources, or change the purpose of the work.</p>
-          </div>
-        </header>
-      </section>
-
-      <section class="major" id="hpcc64" aria-labelledby="hpcc-title">
-        <header>
-          <div class="label">Convergence</div>
-          <div>
-            <h2 id="hpcc-title">Human · Purpose · Cognition · Control</h2>
-            <p>HPCC64 compresses the operating philosophy into four questions. The name is not a technology category; it is a way to examine who acts, why the system exists, how it reasons, and how uncertainty and consequences remain controlled.</p>
-          </div>
-        </header>
-
-        <div class="hpcc">
-          <article><strong>Human</strong><p>Who acts and remains accountable?</p></article>
-          <article><strong>Purpose</strong><p>What outcome and value justify the system?</p></article>
-          <article><strong>Cognition</strong><p>How does information become knowledge, decisions, and actions?</p></article>
-          <article><strong>Control</strong><p>How are uncertainty, behaviour, and consequences kept within acceptable boundaries?</p></article>
         </div>
 
-        <div class="why64">
+        <div class="identity-grid">
+          <div>
+            <h3>Human + Purpose</h3>
+            <p>Human authority and accountability remain explicit. Purpose provides the objective function: value, constraints, beneficiaries, and the outcomes worth pursuing.</p>
+          </div>
+          <div>
+            <h3>Cognition + Control</h3>
+            <p>Cognition covers evidence, knowledge, reasoning, decisions, and automation. Control covers uncertainty, permissions, dependencies, failure modes, and consequences.</p>
+          </div>
+        </div>
+
+        <div class="identity-mark">
           <div class="big64" aria-label="64">64</div>
           <div>
             <h3>Why 64?</h3>
-            <p><strong>64</strong> denotes a six-by-four analytical matrix. It is not the arithmetic statement 6 × 4 = 64.</p>
-            <p>Six system domains define where to look. Four decision criteria define how alternatives and outcomes are evaluated.</p>
+            <p><strong>64</strong> is the mnemonic label for a six-by-four analytical frame: six places to look at a system, evaluated through four recurring decision criteria.</p>
+            <div class="matrix">
+              <div>
+                <h4>6 system domains</h4>
+                <ol>
+                  <li>Value & Outcomes</li>
+                  <li>Actors & Capabilities</li>
+                  <li>Processes & Operating Model</li>
+                  <li>Evidence, Data & Knowledge</li>
+                  <li>Cognition, Decisions & Automation</li>
+                  <li>Technology, Infrastructure & Dependencies</li>
+                </ol>
+              </div>
+              <div>
+                <h4>4 decision criteria</h4>
+                <ol>
+                  <li>Money</li>
+                  <li>Time</li>
+                  <li>Quality</li>
+                  <li>Risk / Uncertainty</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="landscape" aria-labelledby="landscape-title">
+        <div class="section-head">
+          <div class="label">Research landscape</div>
+          <div>
+            <h2 id="landscape-title">Methods, knowledge systems, research lenses, and applied environments.</h2>
+            <p>The project landscape is federated rather than monolithic. Core methods remain separate from knowledge/runtime infrastructure, from research lenses, and from applied projects that expose the ideas to real constraints.</p>
           </div>
         </div>
 
-        <h3>Six system domains</h3>
-        <div class="domains">
-          <article><h4>1. Value & Outcomes</h4><p>Intended value, beneficiaries, outcomes, measurable effects.</p></article>
-          <article><h4>2. Actors & Capabilities</h4><p>Humans, organizations, agents, responsibilities, incentives, capabilities.</p></article>
-          <article><h4>3. Processes & Operating Model</h4><p>Workflows, coordination, decision rights, handoffs, operating structures.</p></article>
-          <article><h4>4. Evidence, Data & Knowledge</h4><p>Provenance, evidence quality, knowledge formation, information lifecycle.</p></article>
-          <article><h4>5. Cognition, Decisions & Automation</h4><p>Reasoning, models, decision mechanisms, automation, human–machine interaction.</p></article>
-          <article><h4>6. Technology, Infrastructure & Dependencies</h4><p>Platforms, interfaces, suppliers, dependencies, resilience mechanisms.</p></article>
+        <div class="landscape">
+          <div>
+            <h3>Methods & decision systems</h3>
+            <ul role="list">
+              <li><strong>RGVE / RGTA / MTQR</strong>Developing value-engineering methodology, its technology-domain predecessor, and explicit trade-off coordinates.</li>
+              <li><strong>PASGR-7 + EXEC</strong>Decision selection, bounded execution, observation, and reassessment.</li>
+              <li><strong>Compliance + Due Diligence</strong>Required/current state evidence and gap identification.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Knowledge & research systems</h3>
+            <ul role="list">
+              <li><strong>Knowledge Fabric</strong>Claims, evidence, provenance, cases, and durable reasoning state.</li>
+              <li><strong>Knowledge Fabric Runtime</strong>Replaceable execution and storage boundary for the knowledge architecture.</li>
+              <li><strong>Social Systems / Social Hacking / Decorative Reality</strong>Power, institutional navigation, representation, and mechanism.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Applied environments</h3>
+            <ul role="list">
+              <li><strong>Nomad Compass</strong>Jurisdictional decisions, evidence, and personal resilience.</li>
+              <li><strong>Analog East</strong>Business discovery, market validation, sourcing, and staged investment.</li>
+              <li><strong>Premium Mobility</strong>Service design, economics, operations, provenance, and decision control.</li>
+            </ul>
+          </div>
         </div>
+
+        <p class="output-note">The landscape above describes current lines of work. Concrete outputs are separated below because an active research system is not the same thing as a finished or published artifact.</p>
       </section>
 
-      <section class="major" id="work" aria-labelledby="work-title">
-        <header>
-          <div class="label">Current work</div>
-          <div>
-            <h2 id="work-title">What we work on now.</h2>
-            <p>Mission-critical systems, Risk-Guided Value Engineering, knowledge architecture, AI and agent systems, human–machine symbiosis, bounded digital agency, and purpose-specific digital identities — to be evaluated through foundational work and applied environments.</p>
-          </div>
-        </header>
-        <section aria-labelledby="foundations-title">
-          <h3 id="foundations-title">Foundational systems</h3>
-          <h4>Knowledge Fabric</h4>
-          <p>A developing architecture for claims, evidence, provenance and durable decision state, with separately scoped runtime capture and replay work.</p>
-          <h4>PASGR-7 + EXEC</h4>
-          <p>Structured decision selection connected to bounded execution, observable results and reassessment. Working mechanisms remain distinct from validated operational capabilities.</p>
-          <h4>Risk-Guided Value Engineering</h4>
-          <p>A developing methodological direction for comparing feasible change across Money, Time, Quality and Risk / Uncertainty.</p>
-        </section>
-        <section aria-labelledby="research-lenses-title">
-          <h3 id="research-lenses-title">Social and institutional research</h3>
-          <p>Social Systems and Power studies general theory; Social Hacking develops diagnostic and navigation methods; Decorative Reality examines representation and mechanism. Their hypotheses and evidence remain distinct from established results.</p>
-        </section>
-      </section>
 
-      <section class="major" aria-labelledby="applied-title">
-        <header>
-          <div class="label">Applied research environments</div>
+      <section id="outputs" aria-labelledby="outputs-title">
+        <div class="section-head">
+          <div class="label">Produced work</div>
           <div>
-            <h2 id="applied-title">Where the ideas meet reality.</h2>
-            <p>Nomad Compass, Analog East, and Premium Mobility are applied research environments where evidence, decisions, economics, operating constraints, and AI-assisted workflows can be tested against concrete problems.</p>
+            <h2 id="outputs-title">Artifacts, not claims of completion.</h2>
+            <p>These outputs exist at different maturity levels. Their presence means that durable work has been produced; it does not imply that every underlying method has been fully validated or frozen.</p>
           </div>
-        </header>
-      </section>
-
-      <section class="major" aria-labelledby="outputs-title">
-        <header>
-          <div class="label">Outputs</div>
-          <div>
-            <h2 id="outputs-title">What we have produced.</h2>
-            <p>Durable artifacts matter more than conversation history. These outputs represent different stages of maturity and should not be read as equally complete products or frozen specifications.</p>
-          </div>
-        </header>
+        </div>
 
         <div class="outputs">
-          <article><h3>Hybrid Multicloud Infrastructure for Mission-Critical IT</h3><p>A working book manuscript and planning framework on resilient infrastructure, business continuity, data governance, confidential computing, and hybrid multi-cloud architecture.</p></article>
-          <article><h3>Knowledge Fabric</h3><p>Architecture and research contracts for evidence-based, machine-usable knowledge, explicit provenance, claim structure and reproducible analytical state; implementation and validation remain ongoing.</p></article>
-          <article><h3>Risk-Guided Value Engineering</h3><p>A developing value-engineering concept connecting compliance assessment, technology due diligence and RGTA; a complete validated specification is not yet available.</p></article>
-          <article><h3>HPCC64 Framework</h3><p>Human · Purpose · Cognition · Control together with six system domains × four decision criteria.</p></article>
+          <article>
+            <h3>Hybrid Multicloud Infrastructure for Mission-Critical IT</h3>
+            <p>A working book manuscript and planning framework connecting resilient infrastructure, business continuity, data governance, confidential computing, and hybrid multi-cloud architecture.</p>
+          </article>
+          <article>
+            <h3>Knowledge Fabric</h3>
+            <p>A structured semantic architecture and research corpus for claims, evidence, provenance, cases, reproducible reasoning state, and portable runtime boundaries; implementation and validation remain ongoing.</p>
+          </article>
+          <article>
+            <h3>Risk-Guided Value Engineering</h3>
+            <p>A developing methodological body connecting compliance assessment, technology due diligence, RGTA, and MTQR. It is not yet a complete validated specification.</p>
+          </article>
+          <article>
+            <h3>HPCC64 framework</h3>
+            <p>The Human · Purpose · Cognition · Control system view together with six system domains and four recurring decision criteria.</p>
+          </article>
         </div>
       </section>
 
-      <section class="major" aria-labelledby="trace-title">
-        <header>
-          <div class="label">Traceability</div>
-          <div>
-            <h2 id="trace-title">Do not hide the machine contribution.</h2>
-            <p>Material work can distinguish concept origin, later material reframing, research and analysis, implementation, review and validation, baseline approval, and publication authorization.</p>
-          </div>
-        </header>
 
-        <p>Git commit identity is not treated as proof of intellectual origin. Human authority, legal rights, and accountability remain separate from contribution provenance.</p>
-      </section>
-
-      <section class="major" aria-labelledby="closing-title">
-        <header>
-          <div class="label">HPCC64 Lab</div>
-          <div>
-            <h2 id="closing-title">One lab. Human judgement and AI reasoning.</h2>
-            <p>HPCC64 is both a research system and a system being studied: purpose remains explicit, claims remain traceable to evidence, uncertainty remains visible, authority remains separate from execution, and final accountability remains human.</p>
-          </div>
-        </header>
+      <section class="closing" aria-label="Closing statement">
+        <p>Resilience began as an infrastructure problem. HPCC64 treats it as a property of the whole system — technology, knowledge, decisions, organizations, and the human–AI relationship itself.</p>
       </section>
     </main>
 
-    <footer>
-      HPCC64 Lab · Public research surface. Selected research repositories remain private until they reach an explicit publication state.
-    </footer>
+    <footer>HPCC64 Lab · Public research surface. Selected underlying research remains in active development.</footer>
   </div>
 </body>
 </html>
