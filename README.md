@@ -109,12 +109,3 @@ Unpublished project names are intentionally not used as public examples.
 ## Repository
 
 This repository contains the public static website for HPCC64 Lab. The site is deliberately minimal: static HTML/CSS, no application framework, and no unnecessary exposure of internal project structure.
-
-## Contribution provenance
-
-### Public narrative v2 — 2026-10-04
-
-- **Direction / public-scope rules:** Alex — defined the required page structure, prohibited public use of unpublished project names, required general treatment of social/business systems, required explicit PASGR-7 / EXEC explanation, rejected oversized slogan typography, and specified CTA/contact destinations.
-- **Research / synthesis / implementation:** Aris — reconstructed the public narrative from the canonical methodology repositories and implemented the static HTML/CSS revision.
-- **Methodology-source check:** PASGR-7 source recovery confirms that no new acronym expansion is currently adopted; its recovered named sequence and PASGR-7 / EXEC separation are preserved.
-- **Review, acceptance, and publication events:** recorded against the exact revision in PR/merge history rather than self-attested inside the content being reviewed.
