@@ -47,7 +47,7 @@ Establishes the evidenced **Current State**: architecture, dependencies, lifecyc
 
 ### RGTA / RGVE + MTQR
 
-**Risk-Guided Technology Advisory (RGTA)** is the technology-domain predecessor of the developing **Risk-Guided Value Engineering (RGVE)** methodology.
+**Risk-Guided Value Engineering (RGVE)** is a developing cross-domain methodology. **Risk-Guided Technology Advisory (RGTA)** is its IT-specific application. Cross-domain scope is not evidence of universal effectiveness.
 
 **MTQR** means **Money · Time · Quality · Risk / Uncertainty** and provides common coordinates for comparing feasible alternatives and target states.
 
@@ -109,3 +109,9 @@ Unpublished project names are intentionally not used as public examples.
 ## Repository
 
 This repository contains the public static website for HPCC64 Lab. The site is deliberately minimal: static HTML/CSS, no application framework, and no unnecessary exposure of internal project structure.
+
+## Website pilot — 2026-10-31
+
+Alex directed the distinct website purposes: www explains the value of collaboration; lab explains human–machine symbiosis, research, engineering and evidence. This candidate names Alex as the human principal, distinguishes personal experience from HPCC64 output, corrects RGVE/RGTA scope and links selected public website artifacts without implying access to private research.
+
+The unfinished book paragraph is a factual project-description candidate for owner content review. It publishes no manuscript or finished-book claim. Codex prepared this adaptation under Dobby coordination. Independent review, exact-revision acceptance and publication are distinct events; no acceptance is self-attested here. See `PILOT-RELEASE.md`.

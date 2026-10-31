@@ -27,7 +27,8 @@ Use this section order:
 3. **Research directions** — describe public problem domains in general terms and explain why they matter.
 4. **Methodologies and relationships** — explain the principal methods and how they connect.
 5. **Practical application** — describe problem classes and use cases without exposing unpublished project names.
-6. **CTA / contact** — GitHub, X, and email.
+6. **Available evidence** — selected publicly inspectable artifacts with honest scope and status.
+7. **CTA / contact** — GitHub, X, email, and the collaboration website.
 
 ### Public-scope rule
 
@@ -40,7 +41,7 @@ Describe practical research through problem classes such as:
 - institutional and regulatory navigation;
 - complex socio-technical change.
 
-Similarly, describe social-system research in general terms such as actors, incentives, power, formal rules, operational mechanisms, feedback loops, friction, and representation-versus-reality gaps. Do not publish internal project/repository names unless they have an explicit public publication decision.
+Similarly, describe social-system research in general terms such as actors, incentives, power, formal rules, operational mechanisms, feedback loops, friction, and representation-versus-reality gaps. Do not publish internal project/repository names unless they have an explicit public publication decision. The 2026-10-31 pilot permits a short factual description of the unfinished book as a candidate for owner review; never expose its manuscript or imply completion.
 
 ## Public methodologies
 
@@ -48,7 +49,7 @@ The site may explain the following named methodologies because they are part of 
 
 - **IT Compliance Assessment** — establishes Required State: obligations, mandatory controls, capabilities, and hard constraints.
 - **Technology Due Diligence** — establishes evidenced Current State: architecture, dependencies, lifecycle, operating capability, economics, gaps, and uncertainty.
-- **RGTA / RGVE + MTQR** — RGTA is the technology-domain predecessor of the developing Risk-Guided Value Engineering methodology; MTQR means Money · Time · Quality · Risk / Uncertainty.
+- **RGTA / RGVE + MTQR** — RGVE is the developing cross-domain Risk-Guided Value Engineering methodology; RGTA is its IT-specific application; MTQR means Money · Time · Quality · Risk / Uncertainty.
 - **PASGR-7** — decision mechanism for uncertain multi-actor problems. Do not invent a new acronym expansion. The historically recovered named sequence is Problem → Architecture → Scenarios → Grading → Recombination → Review → Run.
 - **EXEC** — execution layer paired with PASGR-7; turns a selected direction into bounded, observable action with evidence, success/failure logic, error handling, escalation, and reassessment.
 - **Knowledge Fabric** — evidence/provenance/reproducibility layer spanning the decision loop.
@@ -121,7 +122,7 @@ For site work, validate desktop/mobile rendering, navigation, link behavior, acc
 
 ## Commit & Pull Request Guidelines
 
-Use concise conventional commit subjects. Material changes go through PR + review. Codex review is required before merge.
+Use concise conventional commit subjects. Material changes go through PR + review. Codex review is required before merge. Use local cloud previews for this pilot; remote preview deployment, merge and live publication require separate authorization.
 
 ## Scope Guardrails
 
