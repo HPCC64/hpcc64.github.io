@@ -1,7 +1,8 @@
 # Site maintenance
 
-- Publish only `public/`. Keep the site static, accessible and responsive; avoid frameworks, dependencies, remote fonts, and unnecessary scripts.
-- Preserve HPCC64 identity (Human · Purpose · Cognition · Control), restrained black/white/red presentation, and the distinct roles of www (collaboration) and lab (research).
-- Keep claims traceable. Distinguish proposed methods from validated results; do not disclose unpublished or private project details.
-- Keep navigation, anchors, contact links and canonical URLs correct. Validate on desktop/mobile and with keyboard before release.
-- Use a pull request and applicable review rules. A successful check is not content approval or permission to merge/deploy. Do not modify hosting, DNS, analytics settings or production without explicit authorization.
+- Publish only `public/`: readable semantic HTML and separate local CSS; no frameworks, remote fonts, tracking or unnecessary dependencies/scripts. Analytics activation needs separate approval.
+- Preserve Human · Purpose · Cognition · Control, black/white/red identity, and www collaboration / Lab research purposes. Alex retains purpose, consequential decisions and accountability; AI acts within authorized bounds. Developing methods are not validated results.
+- Use supported public claims and existing contact routes. No private source disclosure or invented credentials, outcomes or commitments.
+- Check links, metadata, 404 behavior, desktop/mobile layout, keyboard access and unexpected requests.
+- Continue the existing draft PR; preserve concurrent work. Independent and Codex review must cover final substantive changes.
+- No merge, deployment, hosting/DNS/TLS/access/subscription changes or analytics activation without explicit owner authorization. Review success is not publication permission.
