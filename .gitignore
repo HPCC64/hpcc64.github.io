@@ -1,1 +1,19 @@
+# Local environment and credentials
+.env
+.env.*
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Editors and operating systems
 .DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Local scratch and generated files
+*.log
+.cache/
+.tmp/
