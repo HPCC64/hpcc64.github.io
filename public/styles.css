@@ -1,4 +1,3 @@
-/* Local presentation choices; not a canonical brand specification. */
 :root {
   color-scheme: light;
   --ink: #111;
@@ -181,24 +180,9 @@ p {
   border-top: 2px solid var(--ink);
   padding-top: 18px;
 }
-.pair ul {
-  padding-left: 22px;
-  color: var(--text);
-}
-li {
-  margin-bottom: 8px;
-}
 .note {
   font-size: 0.9rem;
   color: #525252;
-}
-.status {
-  font-size: 0.78rem;
-  font-weight: 650;
-  display: inline-block;
-  border: 1px solid #777;
-  padding: 2px 8px;
-  margin-bottom: 10px;
 }
 .links {
   display: flex;
